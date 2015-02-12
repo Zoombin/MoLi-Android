@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/header_height" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/headBackStyle" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="12dip"
+            android:layout_toRightOf="@id/iv_back"
+            android:background="@drawable/common_input_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="3dip" >
+
+            <EditText
+                android:id="@+id/et_input"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/search_icon"
+                android:focusable="false"
+                android:gravity="left|center"
+                android:hint="输入商家/分类"
+                android:imeOptions="actionSearch"
+                android:paddingBottom="2.0dip"
+                android:paddingLeft="6.0dip"
+                android:paddingRight="2.0dip"
+                android:paddingTop="2.0dip"
+                android:singleLine="true"
+                android:textColor="@color/main_default_black_text_color"
+                android:textColorHint="@color/app_text_gray"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+    <!-- above title -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/gv_storecategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dip" />
+    </ScrollView>
+
+</LinearLayout>

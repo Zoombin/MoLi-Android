@@ -1,0 +1,145 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/home_top_bg"
+        android:orientation="horizontal"
+        android:paddingBottom="6dip"
+        android:paddingLeft="16dip"
+        android:paddingRight="11dip"
+        android:paddingTop="6dip" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/common_input_bg"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/home_homepage_btn_search_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="2.0dip"
+                    android:background="@drawable/home_search_category_bg_selector"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/home_homepage_et_input"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/search_icon"
+                    android:focusable="false"
+                    android:gravity="left|center"
+                    android:hint="@string/search_good"
+                    android:imeOptions="actionSearch"
+                    android:paddingBottom="2.0dip"
+                    android:paddingLeft="6.0dip"
+                    android:paddingRight="2.0dip"
+                    android:paddingTop="2.0dip"
+                    android:singleLine="true"
+                    android:textColor="@color/main_default_black_text_color"
+                    android:textColorHint="@color/app_text_gray"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/login_code_del_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15.0dip"
+                android:drawableRight="@drawable/public_appraise_deleted"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/scan" />
+    </LinearLayout>
+
+    <com.imooly.android.widget.pulltorefresh.PullToRefreshScrollView
+        android:id="@+id/layout_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_bg_color"
+        android:scrollbars="none"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.imooly.android.widget.autoscrollviewpager.AutoScrollViewPager
+                    android:id="@+id/viewpager_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.imooly.android.widget.viewpage.CirclePageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="50dip"
+                    android:padding="10dip" />
+            </RelativeLayout>
+
+            <com.imooly.android.widget.CannotRollGridView
+                android:id="@+id/gd_modules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4" />
+
+            <TextView
+                android:id="@+id/tv_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="会员精选"
+                android:layout_marginTop="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginBottom="15dip"
+                android:textColor="@color/title"
+                android:textSize="18sp" />
+
+            <com.imooly.android.widget.CannotRollGridView
+                android:id="@+id/gd_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@android:color/transparent" />
+        </LinearLayout>
+    </com.imooly.android.widget.pulltorefresh.PullToRefreshScrollView>
+
+    <com.imooly.android.widget.LoadingView
+        android:id="@+id/layout_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible" />
+
+</LinearLayout>

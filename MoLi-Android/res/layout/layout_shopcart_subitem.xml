@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_subitem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_sub_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <CheckBox
+                android:id="@+id/shopcar_subitem_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/fillorder_ckbox_style"
+                android:gravity="center_vertical" />
+
+            <ImageView
+                android:id="@+id/shopcar_subitem_invalid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_shopcar_invalid"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/shopcar_subitem_pic"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:background="@drawable/order_pic_bg"
+            android:padding="1dip"
+            android:scaleType="fitCenter" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dip"
+            android:layout_marginRight="12dip"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/shopcar_subitem_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/weak_text_color"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/shopcar_subitem_mlayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/shopcar_subitem_minus"
+                        android:layout_width="35dip"
+                        android:layout_height="35dip"
+                        android:background="@drawable/shopcar_sub" />
+
+                    <EditText
+                        android:id="@+id/shopcar_subitem_et_num"
+                        android:layout_width="70dip"
+                        android:layout_height="35dip"
+                        android:background="@drawable/order_edit_bg"
+                        android:gravity="center"
+                        android:inputType="number" />
+
+                    <ImageView
+                        android:id="@+id/shopcar_subitem_plus"
+                        android:layout_width="35dip"
+                        android:layout_height="35dip"
+                        android:background="@drawable/shopcar_add" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/shopcar_subitem_spec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="3dip"
+                android:textColor="@color/app_text_gray"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dip"
+            android:gravity="right"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥"
+                    android:textColor="@color/title"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/shopcar_subitem_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/title"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/shopcar_subitem_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/title"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/shopcar_subitem_stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/main_color"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:src="@drawable/order_dash_line" />
+
+</LinearLayout>

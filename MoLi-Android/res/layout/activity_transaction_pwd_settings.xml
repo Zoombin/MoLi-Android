@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bg_color" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/btn_title_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/find_password"  />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/et_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white"
+        android:focusable="true"
+        android:hint="@string/hint_user"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/et_verifycode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:focusable="true"
+            android:hint="@string/hint_verification"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColorHint="@android:color/darker_gray" />
+        
+        <Button
+	        android:id="@+id/btn_verifycode"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/btn_round_red"
+	        android:gravity="center"
+	        android:text="@string/register_verifycode"
+	        android:textColor="@color/white" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/line_color" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_gray"
+        android:gravity="center"
+        android:text="@string/next"
+        android:textColor="@color/white" />
+
+</LinearLayout>

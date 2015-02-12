@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <!-- MapLyout -->
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" />
+    
+     <!-- TitleLyout -->
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dip"
+        android:layout_marginTop="6dip"
+        android:padding="3dip" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_back"
+            android:scaleType="fitXY" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="6dip"
+            android:background="@color/line_color"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:minWidth="70dip"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="40.0dip"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/zoom_in"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:background="@drawable/store_topbutton" />
+
+            <ImageButton
+                android:id="@+id/zoom_out"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:background="@drawable/store_bottombutton" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/locateBtn"
+            android:layout_width="38.0dip"
+            android:layout_height="38.0dip"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/store_map_button_bg" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/ll_routeplay"
+        layout="@layout/layout_store_routeplan" />
+
+</RelativeLayout>

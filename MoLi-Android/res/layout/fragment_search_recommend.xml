@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.imooly.android.widget.LineBreakLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linebreaklayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#EFEFEF"
+    android:orientation="horizontal" />

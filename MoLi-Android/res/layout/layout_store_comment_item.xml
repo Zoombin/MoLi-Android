@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.imooly.android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="12dip" >
+
+    <TextView
+        android:id="@+id/store_comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="4dip"
+        android:lineSpacingMultiplier="1"
+        android:text=""
+        android:textColor="@color/title"
+        android:textSize="16sp" />
+
+    <com.imooly.android.widget.HorizontalListView
+        android:id="@+id/store_comment_hlist"
+        android:layout_width="match_parent"
+        android:layout_height="65dip"
+        android:layout_marginTop="6dip"
+        android:cacheColorHint="#00000000"
+        android:divider="#00000000"
+        android:listSelector="#00000000"
+        app:dividerWidth="4dip" >
+    </com.imooly.android.widget.HorizontalListView>
+
+    <TextView
+        android:id="@+id/store_comment_spec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dip"
+        android:text=""
+        android:textColor="@color/app_text_gray"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/store_comment_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text=""
+            android:textColor="@color/app_text_gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/store_comment_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="2017-01-02"
+            android:textColor="@color/app_text_gray"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/store_comment_excess"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dip"
+        android:background="@drawable/store_comment_excess_bg"
+        android:gravity="top"
+        android:paddingTop="12dip"
+        android:text="追加评论"
+        android:textColor="@color/app_text_gray"
+        android:textSize="16sp" />
+
+</LinearLayout>

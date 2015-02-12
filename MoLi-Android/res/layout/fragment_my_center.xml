@@ -1,0 +1,371 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_title_mycenter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:background="@color/title_bg_color" >
+
+        <Button
+            android:id="@+id/Button_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_ic_settings"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的魔力"
+            android:textColor="@color/app_text_black"
+            android:textSize="@dimen/txt_size_32" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+    <!-- above header -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_bg_color"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_my_center"
+                    android:orientation="vertical" >
+
+                    <!-- not login state -->
+
+                    <TextView
+                        android:id="@+id/text_login_register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/bg_login_register"
+                        android:text="登录/注册"
+                        android:textColor="@color/title"
+                        android:textSize="@dimen/txt_size_32"
+                        android:visibility="visible" />
+
+                    <!-- login state -->
+
+                    <RelativeLayout
+                        android:id="@+id/relative_login_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:visibility="visible" >
+
+                        <ImageView
+                            android:id="@+id/image_user_portrait"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_portrait" />
+
+                        <TextView
+                            android:id="@+id/text_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/image_user_portrait"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="疯丫头"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/txt_size_32" />
+
+                        <TextView
+                            android:id="@+id/text_modify_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bg_login_modify"
+                            android:ellipsize="end"
+                            android:gravity="right"
+                            android:singleLine="true"
+                            android:text="修改信息"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/txt_size_24" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="bottom"
+                    android:background="#4c000000" >
+
+                    <!-- first -->
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
+
+                        <Button
+                            android:id="@+id/button_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_yuan"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="待付款"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/txt_size_24" />
+
+                        <TextView
+                            android:id="@+id/text_Payment"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginLeft="47dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/bg_round_number_dot"
+                            android:gravity="center"
+                            android:text="99"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#80FFFFFF" />
+
+                    <!-- second -->
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
+
+                        <Button
+                            android:id="@+id/button_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_delivery"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="待发货"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/txt_size_24" />
+
+                        <TextView
+                            android:id="@+id/text_send"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginLeft="47dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/bg_round_number_dot"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#80FFFFFF" />
+
+                    <!-- third -->
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF" >
+
+                        <Button
+                            android:id="@+id/button_reciever"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_receiver"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="待收货"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/txt_size_24" />
+
+                        <TextView
+                            android:id="@+id/text_receive"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginLeft="47dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/bg_round_number_dot"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#80FFFFFF" />
+
+                    <!-- forth -->
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF"
+                        android:orientation="vertical" >
+
+                        <Button
+                            android:id="@+id/button_delivery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_evaluation"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="待评价"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/txt_size_24" />
+
+                        <TextView
+                            android:id="@+id/text_comment"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginLeft="47dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/bg_round_number_dot"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+                    </FrameLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- first label -->
+
+            <include layout="@layout/lable_all_order" />
+
+            <!-- second third label -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+                <include layout="@layout/label_member_center" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="45dp"
+                    android:background="#DCDCDC" />
+
+                <include layout="@layout/label_voucher" />
+            </LinearLayout>
+
+            <!-- third label -->
+
+            <include layout="@layout/label_my_collection" />
+
+            <!-- line -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:background="@android:color/white"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:background="@color/line_color" />
+            </LinearLayout>
+
+            <!-- forth label -->
+
+            <include layout="@layout/label_my_footstep" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:background="@android:color/white"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:background="@color/line_color" />
+            </LinearLayout>
+
+            <!-- fifth label -->
+
+            <include layout="@layout/label_my_message" />
+
+            <!-- sixth label -->
+
+            <include layout="@layout/label_service" />
+
+            <!-- seventh label -->
+
+            <include layout="@layout/label_account_safe" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

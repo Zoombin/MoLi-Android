@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp" >
+
+        <Button
+            android:id="@+id/button_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_home_selector"
+            android:onClick="onTabClicked"
+            android:singleLine="true"
+            android:tag="home"
+            android:text="@string/text_tab_home"
+            android:textColor="@color/text_tab_color" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/line_color" />
+
+        <Button
+            android:id="@+id/button_sort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_sort_selector"
+            android:onClick="onTabClicked"
+            android:singleLine="true"
+            android:tag="sort"
+            android:text="@string/text_tab_category"
+            android:textColor="@color/text_tab_color" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/line_color" />
+
+        <Button
+            android:id="@+id/button_store"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_store_selector"
+            android:onClick="onTabClicked"
+            android:singleLine="true"
+            android:tag="store"
+            android:text="@string/text_tab_store"
+            android:textColor="@color/text_tab_color" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/line_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" >
+
+            <Button
+                android:id="@+id/button_shopcart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_shopcart_selector"
+                android:onClick="onTabClicked"
+                android:singleLine="true"
+                android:tag="shopcart"
+                android:text="@string/text_tab_shopcart"
+                android:textColor="@color/text_tab_color" />
+
+            <ImageView
+                android:id="@+id/iv_mark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="6dip"
+                android:src="@drawable/ic_mark_s"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/line_color" />
+
+        <Button
+            android:id="@+id/button_mycenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_mycenter_selector"
+            android:onClick="onTabClicked"
+            android:singleLine="true"
+            android:tag="mycenter"
+            android:text="@string/text_tab_mycenter"
+            android:textColor="@color/text_tab_color" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/main_bottom"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/view_line" />
+
+</RelativeLayout>

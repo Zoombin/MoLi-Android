@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="16dip" >
+
+    <ImageView
+        android:id="@+id/order_logistics_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/order_detail_status_online" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/order_logistics_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="已签收，签收是本人"
+            android:textColor="@color/app_text_dark_gray"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/order_logistics_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="2014-01-09 10:09:01"
+            android:textColor="@color/app_text_gray"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>
