@@ -168,7 +168,7 @@
                 android:layout_weight="1.0"
                 android:background="@drawable/reserve_gray_btn_selector"
                 android:text="清空筛选"
-                android:textColor="@color/weak_text_color"
+                android:textColor="@color/app_text_dark_gray"
                 android:textSize="16.0sp" />
 
             <Button

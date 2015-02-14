@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#EFEFEF"
+    android:background="@color/app_bg_color"
     android:orientation="vertical" >
 
     <com.imooly.android.widget.LineBreakLayout
@@ -15,13 +15,7 @@
 
     <Button
         android:id="@+id/btn_cleardata"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/main_color"
-        android:paddingTop="10dip"
-        android:paddingBottom="10dip"
-        android:textSize="20sp"
-        android:text="清空历史"
-        android:textColor="@color/white" />
+        style="@style/btnUserStyle"
+        android:text="清空历史" />
 
 </LinearLayout>

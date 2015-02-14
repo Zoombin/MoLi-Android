@@ -7,6 +7,7 @@
     <!-- 头部栏控件尺寸 -->
     <dimen name="header_back_size">17dip</dimen>
     <dimen name="header_back_margin">15dip</dimen>
+    <dimen name="header_paddingTop">7dip</dimen>
 
     <!-- 头部下面空开间距 -->
     <dimen name="header_margin_bottom">20.5dip</dimen>
@@ -18,16 +19,14 @@
     <dimen name="btnuser_height">48dip</dimen>
     
     <!-- app text size -->
-    <dimen name="tv_size_24">12sp</dimen>
-    <dimen name="tv_size_26">13sp</dimen>
-    <dimen name="tv_size_28">14sp</dimen>
-    <dimen name="tv_size_30">15sp</dimen>
-    <dimen name="tv_size_32">16sp</dimen>
-    <dimen name="tv_size_34">17sp</dimen>
-    <dimen name="tv_size_36">18sp</dimen>
-    
-    
-    
+    <dimen name="tv_size_24">14sp</dimen>
+    <dimen name="tv_size_26">15sp</dimen>
+    <dimen name="tv_size_28">16sp</dimen>
+    <dimen name="tv_size_30">17sp</dimen>
+    <dimen name="tv_size_32">18sp</dimen>
+    <dimen name="tv_size_34">19sp</dimen>
+    <dimen name="tv_size_36">20sp</dimen>
+
     <dimen name="txt_size_24">14sp</dimen>
     <dimen name="txt_size_26">16sp</dimen>
     <dimen name="txt_size_28">17sp</dimen>
@@ -36,11 +35,11 @@
     <dimen name="txt_size_34">21sp</dimen>
     
     <!-- 距离头部标题的margin -->
-    <dimen name="margin_top_40">30dp</dimen>
-    <dimen name="margin_top_20">15dp</dimen>
+    <dimen name="margin_top_40">20dp</dimen>
+    <dimen name="margin_top_20">10dp</dimen>
     
     <!-- 通用dp -->
-    <dimen name="dp_5">10dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
     <dimen name="dp_10">10dp</dimen>
     <dimen name="dp_15">15dp</dimen>
     <dimen name="dp_20">20dp</dimen>

@@ -9,4 +9,4 @@
     android:padding="10.0dip"
     android:singleLine="true"
     android:textColor="@color/app_text_gray"
-    android:textSize="16sp" />
+    android:textSize="@dimen/tv_size_24" />

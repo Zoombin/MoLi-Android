@@ -7,7 +7,9 @@
 
     <RelativeLayout
         android:id="@+id/ll_title"
-        style="@style/headLayoutStyle" >
+        style="@style/headLayoutStyle"
+        android:layout_marginBottom="0dip"
+         >
 
         <ImageView
             android:id="@+id/iv_back"
@@ -24,6 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/header_back_margin"
             android:background="@drawable/stroe_collect_selector"
             android:scaleType="fitXY" />
 
@@ -33,6 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@id/btn_collect"
+            android:layout_marginRight="@dimen/header_back_margin"
             android:background="@drawable/selector_ic_share_title"
             android:scaleType="fitXY" />
 

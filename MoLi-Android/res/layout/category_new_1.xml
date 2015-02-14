@@ -9,25 +9,17 @@
     <LinearLayout
         android:id="@+id/layout_category_item_1"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dip"
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 
-        <RelativeLayout
-            android:id="@+id/cate_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10.0dip"
-            android:layout_marginLeft="15.0dip"
-            android:layout_marginRight="15.0dip"
-            android:layout_marginTop="10.0dip" >
-
-            <ImageView
-                android:id="@+id/cate_iv_logo"
-                android:layout_width="51.0dip"
-                android:layout_height="51.0dip"
-                android:scaleType="fitXY" />
-        </RelativeLayout>
+        <ImageView
+            android:id="@+id/cate_iv_logo"
+            android:layout_width="51.0dip"
+            android:layout_height="51.0dip"
+            android:layout_marginLeft="@dimen/header_back_margin"
+            android:layout_marginRight="@dimen/header_back_margin"
+            android:scaleType="fitXY" />
 
         <LinearLayout
             android:id="@+id/cate_content"
@@ -42,7 +34,7 @@
                 android:maxEms="10"
                 android:singleLine="true"
                 android:textColor="@color/title"
-                android:textSize="18.0sp" />
+                android:textSize="@dimen/tv_size_34" />
 
             <TextView
                 android:id="@+id/cate_iv_sub"
@@ -52,7 +44,7 @@
                 android:maxEms="15"
                 android:singleLine="true"
                 android:textColor="@color/app_text_gray"
-                android:textSize="14.0sp" />
+                android:textSize="@dimen/tv_size_26" />
         </LinearLayout>
     </LinearLayout>
 
@@ -70,8 +62,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/layout_category_item_1"
-        android:layout_marginLeft="15dip"
-        android:layout_marginRight="15dip"
+        android:layout_marginLeft="@dimen/header_back_margin"
+        android:layout_marginRight="@dimen/header_back_margin"
         android:background="@drawable/cate_line1" />
 
 </RelativeLayout>

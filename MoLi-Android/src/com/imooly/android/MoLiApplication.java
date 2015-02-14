@@ -10,8 +10,6 @@ import com.baidu.location.GeofenceClient;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.baidu.mapapi.SDKInitializer;
-import com.imooly.android.tool.Config;
-import com.imooly.android.tool.DimensTools;
 import com.imooly.android.tool.MoliMessageHandler;
 import com.imooly.android.tool.MoliNotificationClickHandler;
 import com.imooly.android.utils.Utils;
@@ -47,7 +45,6 @@ public class MoLiApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
-//		DimensTools.run();
 		self = this;
 		mContext = getApplicationContext();
 

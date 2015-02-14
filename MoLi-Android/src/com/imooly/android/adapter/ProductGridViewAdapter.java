@@ -11,10 +11,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
 import com.imooly.android.R;
 import com.imooly.android.entity.RspGoodsSearch.GoodsEty;
+import com.imooly.android.tool.Config;
 import com.imooly.android.ui.ProductDetailActivity;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -81,6 +83,11 @@ public class ProductGridViewAdapter extends BaseAdapter {
 					.findViewById(R.id.category_productlist_grid_item_frame);
 			holder.category_productlist_grid_item_icon = (ImageView) convertView
 					.findViewById(R.id.category_productlist_grid_item_icon);
+			
+			int width = Config.width / 2 - 32;
+			LayoutParams params = new LayoutParams(width, width);
+			holder.category_productlist_grid_item_icon.setLayoutParams(params);
+			
 			holder.category_productlist_grid_item_title = (TextView) convertView
 					.findViewById(R.id.category_productlist_grid_item_title);
 			holder.category_productlist_grid_item_ad = (TextView) convertView
@@ -98,6 +105,9 @@ public class ProductGridViewAdapter extends BaseAdapter {
 					.findViewById(R.id.category_productlist_grid_item_frame2);
 			holder.category_productlist_grid_item_icon2 = (ImageView) convertView
 					.findViewById(R.id.category_productlist_grid_item_icon2);
+			
+			holder.category_productlist_grid_item_icon2.setLayoutParams(params);
+			
 			holder.category_productlist_grid_item_title2 = (TextView) convertView
 					.findViewById(R.id.category_productlist_grid_item_title2);
 			holder.category_productlist_grid_item_ad2 = (TextView) convertView

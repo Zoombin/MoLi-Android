@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
+import android.widget.LinearLayout.LayoutParams;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
@@ -71,7 +71,6 @@ public class StoreHotListAdapter extends BaseAdapter implements OnClickListener 
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		// TODO Auto-generated method stub
 		Tag tag;
 		if (convertView == null) {
 			tag = new Tag();
@@ -85,17 +84,18 @@ public class StoreHotListAdapter extends BaseAdapter implements OnClickListener 
 			tag = (Tag) convertView.getTag();
 		}
 
-		int width1 = (int)(Config.width / 2 - 20*Config.density);
-		int height1 = width1 / 282 * 278;
+		int width1 = (int)(Config.width / 2 - 25);
+		int height1 = width1 * 278 / 282;
 		LayoutParams params1 = new LayoutParams(width1, height1);
-		//tag.store_hot_pic_left.setLayoutParams(params1);
+		params1.setMargins(0, 0, 20, 0);
+		tag.store_hot_pic_left.setLayoutParams(params1);
 		
-		int width2 = (int)(Config.width / 2 - 20*Config.density);
-		int height2 = width2 / 306 * 132;
-		LayoutParams params2 = new LayoutParams(width1, height1);
-		//tag.store_hot_pic_top.setLayoutParams(params2);
-		//tag.store_hot_pic_bottom.setLayoutParams(params2);
-		
+		int width2 = (int)(Config.width / 2 );
+		int height2 = width2 * 132 / 306;
+		LayoutParams params2 = new LayoutParams(width2, height2);
+		tag.store_hot_pic_bottom.setLayoutParams(params2);
+		params2.setMargins(0, 0, 0, 20);
+		tag.store_hot_pic_top.setLayoutParams(params2);
 		
 
 		tag.store_hot_pic_left.setVisibility(View.INVISIBLE);

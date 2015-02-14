@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -36,7 +35,6 @@ import com.nostra13.universalimageloader.core.ImageLoader;
  * 
  */
 public class StoreCategoryActivity extends BaseActivity implements View.OnClickListener {
-	private RelativeLayout ll_title;
 	private ImageView iv_back;
 
 	private EditText et_input;
@@ -56,8 +54,6 @@ public class StoreCategoryActivity extends BaseActivity implements View.OnClickL
 	}
 
 	private void initView() {
-		ll_title = (RelativeLayout) findViewById(R.id.ll_title);
-
 		iv_back = (ImageView) findViewById(R.id.iv_back);
 		iv_back.setOnClickListener(this);
 
@@ -73,7 +69,6 @@ public class StoreCategoryActivity extends BaseActivity implements View.OnClickL
 		try {
 			classifylist = Config.getBusinessClassList();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		if (classifylist != null) {

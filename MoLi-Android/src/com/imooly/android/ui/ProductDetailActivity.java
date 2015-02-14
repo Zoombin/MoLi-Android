@@ -5,6 +5,7 @@ import java.util.List;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
@@ -48,6 +49,7 @@ import com.imooly.android.entity.RspSuccessCommon;
 import com.imooly.android.entity.ServiceResult;
 import com.imooly.android.enums.ShareObject;
 import com.imooly.android.tool.ClickUtil;
+import com.imooly.android.tool.Config;
 import com.imooly.android.tool.Constants;
 import com.imooly.android.utils.OnSingleClickListener;
 import com.imooly.android.utils.Utils;
@@ -60,7 +62,9 @@ import com.imooly.android.widget.ShareDialog;
 import com.imooly.android.widget.Toast;
 import com.imooly.android.widget.autoscrollviewpager.AutoScrollViewPager;
 import com.imooly.android.widget.viewpage.CirclePageIndicator;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 
 /**
  * 商品详情页面
@@ -132,9 +136,7 @@ public class ProductDetailActivity extends BaseActivity implements OnClickListen
 	private void initView() {
 		mInflater = (LayoutInflater) self.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
 
-		DisplayMetrics dm = new DisplayMetrics();
-		getWindowManager().getDefaultDisplay().getMetrics(dm);
-		int screenWidth = dm.widthPixels;
+		int screenWidth = Config.width;
 		pager = (AutoScrollViewPager) findViewById(R.id.pager);
 		pager.getLayoutParams().height = screenWidth;
 		pager.getLayoutParams().width = screenWidth;
@@ -344,7 +346,17 @@ public class ProductDetailActivity extends BaseActivity implements OnClickListen
 					String bssid = store.getBusinessid();// 旗舰店id
 					String bname = store.getBusinessname();// 旗舰店名字
 					String bicon = store.getBusinessicon();// 旗舰店图标
-					ImageLoader.getInstance().displayImage(bicon, storeIcon);
+					
+					DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
+					.showImageOnLoading(R.drawable.ic_loading_580_276)
+				    .showImageForEmptyUri(R.drawable.ic_error_580_276)  // empty URI时显示的图片  
+				    .showImageOnFail(R.drawable.ic_error_580_276)      // 不是图片文件 显示图片  
+					.cacheInMemory(true)
+					.bitmapConfig(Bitmap.Config.RGB_565)  // 图片压缩质量
+					.cacheOnDisc(true)			
+					.imageScaleType(ImageScaleType.EXACTLY_STRETCHED)
+					.build();
+					ImageLoader.getInstance().displayImage(bicon, storeIcon, defaultOptions);
 					storeName.setText(bname);
 				}
 

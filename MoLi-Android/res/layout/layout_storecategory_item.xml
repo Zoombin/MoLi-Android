@@ -35,12 +35,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:background="#30000000"
+                    android:background="#4C000000"
                     android:gravity="center"
                     android:maxLines="1"
                     android:padding="6dip"
                     android:textColor="@color/white"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/tv_size_26" />
             </RelativeLayout>
 
             <ImageView
@@ -80,7 +80,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:background="#30000000"
+                    android:background="#4C000000"
                     android:gravity="center"
                     android:maxLines="1"
                     android:padding="6dip"
@@ -125,7 +125,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:background="#30000000"
+                    android:background="#4C000000"
                     android:gravity="center"
                     android:maxLines="1"
                     android:padding="6dip"

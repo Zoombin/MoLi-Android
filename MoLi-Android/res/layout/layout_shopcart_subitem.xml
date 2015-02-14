@@ -11,9 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingBottom="5dip"
-        android:paddingTop="5dip" >
+        android:orientation="horizontal" >
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -45,8 +43,8 @@
         <LinearLayout
             android:layout_width="0dip"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="12dip"
-            android:layout_marginRight="12dip"
+            android:layout_marginLeft="@dimen/header_back_margin"
+            android:layout_marginRight="@dimen/header_back_margin"
             android:layout_weight="1"
             android:orientation="vertical" >
 
@@ -61,8 +59,8 @@
                     android:layout_gravity="left"
                     android:ellipsize="end"
                     android:maxLines="2"
-                    android:textColor="@color/weak_text_color"
-                    android:textSize="15sp" />
+                    android:textColor="@color/app_text_dark_gray"
+                    android:textSize="@dimen/tv_size_28" />
 
                 <LinearLayout
                     android:id="@+id/shopcar_subitem_mlayout"
@@ -98,15 +96,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginTop="3dip"
+                android:layout_marginTop="5dip"
+                android:maxLines="2"
                 android:textColor="@color/app_text_gray"
-                android:textSize="13sp" />
+                android:textSize="@dimen/tv_size_24" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="15dip"
+            android:layout_marginRight="@dimen/header_back_margin"
             android:gravity="right"
             android:orientation="vertical" >
 
@@ -120,38 +119,39 @@
                     android:layout_height="wrap_content"
                     android:text="￥"
                     android:textColor="@color/title"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/tv_size_24" />
 
                 <TextView
                     android:id="@+id/shopcar_subitem_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/title"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/tv_size_24" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/shopcar_subitem_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:layout_marginTop="5dip"
                 android:textColor="@color/title"
-                android:textSize="13sp" />
+                android:textSize="@dimen/tv_size_24" />
 
             <TextView
                 android:id="@+id/shopcar_subitem_stock"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
                 android:textColor="@color/main_color"
-                android:textSize="13sp" />
+                android:textSize="@dimen/tv_size_24" />
         </LinearLayout>
     </LinearLayout>
 
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dip"
-        android:layout_marginRight="15dip"
+        android:layout_marginLeft="@dimen/tv_size_24"
+        android:layout_marginRight="@dimen/tv_size_24"
         android:src="@drawable/order_dash_line" />
 
 </LinearLayout>

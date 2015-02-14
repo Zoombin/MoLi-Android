@@ -38,11 +38,28 @@
         <item name="android:background">@color/white</item>
         <item name="android:focusable">true</item>
         <item name="android:singleLine">true</item>
-        <item name="android:textColor">@color/weak_text_color</item>
+        <item name="android:textColor">@color/app_text_dark_gray</item>
         <item name="android:textSize">@dimen/tv_size_30</item>
         <item name="android:textColorHint">@color/app_text_gray</item>
     </style>
 
+    <!-- 商品输入框 -->
+    <style name="inputStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_marginLeft">3dip</item>
+        <item name="android:drawableLeft">@drawable/search_icon</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:imeOptions">actionSearch</item>
+        <item name="android:paddingLeft">@dimen/header_paddingTop</item>
+        <item name="android:textColor">@color/app_text_dark_gray</item>
+        <item name="android:textSize">@dimen/tv_size_32</item>
+        <item name="android:textColorHint">@color/app_text_gray</item>
+    </style>
+    
     <!-- 登陆注册按钮 -->
     <style name="btnUserStyle">
         <item name="android:layout_width">match_parent</item>
@@ -162,7 +179,7 @@
     </style>
 
     <style name="product_list_group_item_style">
-        <item name="android:textSize">16.0sp</item>
+        <item name="android:textSize">@dimen/tv_size_26</item>
         <item name="android:textColor">@color/segments_item_text_color_selector</item>
         <item name="android:ellipsize">end</item>
         <item name="android:gravity">center</item>

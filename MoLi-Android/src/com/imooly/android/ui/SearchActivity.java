@@ -155,12 +155,12 @@ public class SearchActivity extends BaseActivity implements OnClickListener {
 					iv_search_history.setImageResource(R.drawable.search_history_pressed);
 					tv_recently_search_tab.setTextColor(resources.getColor(R.color.main_color));
 					iv_search_hot.setImageResource(R.drawable.search_hot_normal);
-					tv_hot_search_tab.setTextColor(resources.getColor(R.color.weak_text_color));
+					tv_hot_search_tab.setTextColor(resources.getColor(R.color.app_text_dark_gray));
 					fromXDelta = layout_history.getWidth() + 1;
 					toXDelta = 0f;
 				} else {
 					iv_search_history.setImageResource(R.drawable.search_history_normal);
-					tv_recently_search_tab.setTextColor(resources.getColor(R.color.weak_text_color));
+					tv_recently_search_tab.setTextColor(resources.getColor(R.color.app_text_dark_gray));
 					iv_search_hot.setImageResource(R.drawable.search_hot_pressed);
 					tv_hot_search_tab.setTextColor(resources.getColor(R.color.main_color));
 					fromXDelta = 0f;

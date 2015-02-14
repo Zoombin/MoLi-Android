@@ -85,7 +85,7 @@ public class CategoryNewTwoAdapter extends BaseAdapter {
 			holder.cate_tv_two.setTextColor(resources.getColor(R.color.main_color));
 			holder.cate_iv_delta.setVisibility(View.VISIBLE);
         } else {
-        	holder.cate_tv_two.setTextColor(resources.getColor(R.color.weak_text_color));
+        	holder.cate_tv_two.setTextColor(resources.getColor(R.color.app_text_dark_gray));
         	holder.cate_iv_delta.setVisibility(View.GONE);
         }
 		

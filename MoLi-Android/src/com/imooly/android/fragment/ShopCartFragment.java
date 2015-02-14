@@ -54,8 +54,6 @@ public class ShopCartFragment extends BaseFragment implements OnClickListener {
 	private PullToRefreshScrollView scroll_shopcart;
 	private LoadingView layout_loading;
 
-	private RelativeLayout ll_title_mycenter;
-	private TextView tv_title;
 	private TextView tv_right;
 
 	private LinearLayout ll_content;
@@ -105,16 +103,6 @@ public class ShopCartFragment extends BaseFragment implements OnClickListener {
 		noDataView.setOnClickListener(listener);
 		layout_shopcart = (LinearLayout) mActivity.findViewById(R.id.layout_shopcart);
 		layout_loading = (LoadingView) mActivity.findViewById(R.id.layout_loading);
-
-		ll_title_mycenter = (RelativeLayout) mActivity.findViewById(R.id.ll_title_mycenter);
-		// fragment重叠bug
-		ll_title_mycenter.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				// 不做操作
-			}
-		});
 
 		tv_right = (TextView) mActivity.findViewById(R.id.tv_right);
 		tv_right.setOnClickListener(this);

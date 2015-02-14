@@ -62,7 +62,6 @@ public class SearchResultActivity extends BaseActivity implements OnClickListene
 	private final String ORDERWAY_DESC = "1";
 
 	private LinearLayout ll_slide_view;//需要显示 隐藏的
-	private LinearLayout home_homepage_top_search_layout;
 	private ImageView iv_back;
 	private EditText home_homepage_et_input;
 	private TextView login_code_del_imageView;
@@ -126,7 +125,6 @@ public class SearchResultActivity extends BaseActivity implements OnClickListene
 		}
 		
 		ll_slide_view = (LinearLayout) findViewById(R.id.ll_slide_view);
-		home_homepage_top_search_layout = (LinearLayout) findViewById(R.id.home_homepage_top_search_layout);
 
 		login_code_del_imageView = (TextView) findViewById(R.id.login_code_del_imageView);
 		
@@ -370,18 +368,18 @@ public class SearchResultActivity extends BaseActivity implements OnClickListene
 
 		if (l != null) {
 			layout_item_time.setBackgroundResource(android.R.color.transparent);
-			product_list_tab_item_time.setTextColor(resources.getColor(R.color.weak_text_color));
+			product_list_tab_item_time.setTextColor(resources.getColor(R.color.app_text_dark_gray));
 			layout_item_order.setBackgroundResource(android.R.color.transparent);
 			if (orderway.equals("") || orderway.equals(ORDERWAY_DESC)) {
 				iv_price_order.setImageResource(R.drawable.product_price_up);
 			} else {
 				iv_price_order.setImageResource(R.drawable.product_price_down);
 			}
-			product_list_tab_item_price.setTextColor(resources.getColor(R.color.weak_text_color));
+			product_list_tab_item_price.setTextColor(resources.getColor(R.color.app_text_dark_gray));
 			layout_item_salesvolume.setBackgroundResource(android.R.color.transparent);
-			product_list_tab_item_salesvolume.setTextColor(resources.getColor(R.color.weak_text_color));
+			product_list_tab_item_salesvolume.setTextColor(resources.getColor(R.color.app_text_dark_gray));
 			layout_item_hignopinion.setBackgroundResource(android.R.color.transparent);
-			product_list_tab_item_hignopinion.setTextColor(resources.getColor(R.color.weak_text_color));
+			product_list_tab_item_hignopinion.setTextColor(resources.getColor(R.color.app_text_dark_gray));
 			
 			l.setBackgroundResource(R.drawable.tab_selected);
 			v.setTextColor(resources.getColor(R.color.main_color));

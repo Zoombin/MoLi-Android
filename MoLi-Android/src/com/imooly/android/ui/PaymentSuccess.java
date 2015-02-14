@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -25,24 +26,19 @@ import com.imooly.android.wxpay.*;
  * @author
  * 
  */
-public class PaymentSucess extends BaseActivity implements OnClickListener {
+public class PaymentSuccess extends BaseActivity implements OnClickListener {
 
 	public static final String PAYNO = "payno";// 接收结算单号（String）
 	public static final String PAY_MONEY = "pay_money";// 接收付款金额（float）
 	public static final String GOOD_NAME = "pay_subject";// 商品名称
 	public static final String GOOD_INFO = "pay_body";// 商品详情
 
-	private static final String TYPE_ALIPAY = "alipay";
-	private static final String TYPE_WEIXIN = "weixin";
-
-	private RelativeLayout ll_title;
-	private ImageView iv_back;
-	private TextView tv_title, text_money;
-
+	private ImageView iv_payment_sucess_back;
+	private TextView txt_payno, txt_price, txt_pay_type;
+	private Button btn_shopping, btn_my_orders;
 	private float mPrice = 0.0f;
-	private String mPayNo;
-	private String mGoodName;
-	private String mGoodInfo;
+	private String mPayNo = "";
+	private String mPayType = "";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -53,20 +49,39 @@ public class PaymentSucess extends BaseActivity implements OnClickListener {
 		Intent intent = getIntent();
 
 		if (intent != null) {
-			mPayNo = intent.getStringExtra(PaymentSucess.PAYNO);
-			mPrice = intent.getFloatExtra(PaymentSucess.PAY_MONEY, 0.0f);
-			mGoodName = intent.getStringExtra(PaymentSucess.GOOD_NAME);
-			mGoodInfo = intent.getStringExtra(PaymentSucess.GOOD_INFO);
+			mPayNo = intent.getStringExtra(PaymentActivity.PAYNO);
+			mPrice = intent.getFloatExtra(PaymentActivity.PAY_MONEY, 0.0f);
+			mPayType = intent.getStringExtra(PaymentActivity.PAY_TYPE);
 		}
-
-		Log.d("xxx", "mPayNo = " + mPayNo);
-		Log.d("xxx", "mPrice = " + mPrice);
 
 		initView();
 		initData();
 
 	}
 
+
+	private void initView() {
+		iv_payment_sucess_back = (ImageView) findViewById(R.id.iv_payment_sucess_back);
+		iv_payment_sucess_back.setOnClickListener(this);
+		
+		txt_payno = (TextView) findViewById(R.id.txt_payno);
+		txt_price = (TextView) findViewById(R.id.txt_price);
+		txt_pay_type = (TextView) findViewById(R.id.txt_pay_type);
+		
+		btn_shopping = (Button) findViewById(R.id.btn_shopping);
+		btn_shopping.setOnClickListener(this);
+		
+		btn_my_orders = (Button) findViewById(R.id.btn_my_orders);
+		btn_my_orders.setOnClickListener(this);
+	}
+
+	private void initData() {
+		
+		txt_payno.setText(mPayNo);
+		txt_price.setText(String.valueOf(mPrice));
+		txt_pay_type.setText(mPayType);
+	}
+	
 	@Override
 	protected void onResume() {
 		super.onResume();
@@ -78,12 +93,6 @@ public class PaymentSucess extends BaseActivity implements OnClickListener {
 		super.onPause();
 	}
 
-	private void initView() {
-
-	}
-
-	private void initData() {
-	}
 
 	@Override
 	protected void onDestroy() {
@@ -93,20 +102,21 @@ public class PaymentSucess extends BaseActivity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		Intent intent;
-
+		
 		switch (v.getId()) {
 		case R.id.iv_back:
 
 			finish();
 			break;
 
-		case R.id.relative_weixin:
+		case R.id.btn_shopping:
 
+			startActivity(new Intent(this, MainActivity.class));
 			break;
 
-		case R.id.relative_alipay:
+		case R.id.btn_my_orders:
 
+			startActivity(new Intent(this, OrderActivity.class));
 			break;
 
 		default:

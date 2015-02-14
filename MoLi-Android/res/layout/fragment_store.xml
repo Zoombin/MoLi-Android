@@ -6,82 +6,65 @@
     android:background="@color/app_bg_color"
     android:orientation="vertical" >
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/ll_title_store"
-        android:layout_width="fill_parent"
+        style="@style/headLayoutStyle"
         android:layout_height="wrap_content"
-        android:background="#f6f6f6"
-        android:orientation="horizontal" >
+        android:layout_marginBottom="0dip"
+        android:paddingBottom="@dimen/header_paddingTop"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingTop="@dimen/header_paddingTop" >
 
         <TextView
             android:id="@+id/location_city"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="6dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/header_back_margin"
             android:drawablePadding="4dip"
             android:drawableRight="@drawable/ic_arrow_down"
             android:text=""
             android:textColor="@drawable/comm_text_selector_v2"
-            android:textSize="19sp" />
+            android:textSize="@dimen/tv_size_34" />
 
         <LinearLayout
-            android:id="@+id/ll_input"
-            android:layout_width="fill_parent"
+            android:layout_width="0dip"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginBottom="6.0dip"
-            android:layout_marginLeft="10dip"
-            android:layout_marginRight="10dip"
-            android:layout_marginTop="6.0dip"
-            android:layout_toLeftOf="@+id/location_mark"
-            android:layout_toRightOf="@id/location_city"
+            android:layout_weight="1.0"
             android:background="@drawable/common_input_bg"
+            android:focusableInTouchMode="true"
             android:gravity="center_vertical"
             android:orientation="horizontal" >
 
             <EditText
                 android:id="@+id/et_input"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/search_icon"
+                style="@style/inputStyle"
                 android:focusable="false"
-                android:gravity="left|center"
-                android:hint="输入商家、分类或商圈"
-                android:imeOptions="actionSearch"
-                android:paddingBottom="2.0dip"
-                android:paddingLeft="6.0dip"
-                android:paddingRight="2.0dip"
-                android:paddingTop="2.0dip"
-                android:singleLine="true"
-                android:textColor="@color/main_default_black_text_color"
-                android:textColorHint="@color/app_text_gray"
-                android:textSize="16.0sp" />
+                android:hint="输入商家、分类或商圈" />
         </LinearLayout>
 
         <ImageView
             android:id="@+id/location_mark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="12dip"
-            android:padding="5dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/header_back_margin"
             android:src="@drawable/ic_location_mark"
             android:visibility="invisible" />
+    </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:layout_below="@id/ll_input"
-            android:background="@color/line_color" />
-    </RelativeLayout>
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/ll_title_store"
+        android:background="@color/line_color" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/ll_title_store"
+        android:layout_below="@+id/view_line"
         android:orientation="vertical" >
 
         <com.imooly.android.widget.LoadingView
@@ -94,12 +77,14 @@
             android:id="@+id/layout_store"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scrollbars="none"
             android:visibility="gone" >
 
             <LinearLayout
                 android:id="@+id/content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
                 android:orientation="vertical" >
 
                 <!-- 第一栏 -->
@@ -108,7 +93,6 @@
                     android:id="@+id/store_modules"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="11dip"
                     android:listSelector="@android:color/transparent"
                     android:numColumns="4"
                     android:visibility="gone" />
@@ -119,7 +103,7 @@
                     android:id="@+id/ll_level2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dip"
+                    android:layout_marginTop="@dimen/dp_10"
                     android:background="@drawable/layout_white_bg"
                     android:orientation="vertical" >
 
@@ -127,16 +111,20 @@
                         android:id="@+id/level2_txt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dip"
-                        android:layout_marginTop="20dip"
+                        android:layout_marginBottom="5dip"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/header_back_margin"
                         android:text="热门商家"
-                        android:textColor="@color/app_text_gray"
-                        android:textSize="17sp" />
+                        android:textColor="@color/app_text_dark_gray"
+                        android:textSize="@dimen/tv_size_30" />
 
                     <LinearLayout
                         android:id="@+id/ll_level2_content"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dip"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:orientation="vertical" >
 
                         <com.imooly.android.widget.CannotRollListView
@@ -156,25 +144,25 @@
                     android:id="@+id/ll_level3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="14dip"
+                    android:layout_marginTop="@dimen/dp_10"
                     android:background="@drawable/layout_white_bg"
                     android:orientation="vertical"
-                    android:paddingLeft="10dip"
-                    android:paddingRight="10dip" >
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10" >
 
                     <TextView
                         android:id="@+id/level3_txt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dip"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_10"
                         android:text="猜您喜欢"
-                        android:textColor="@color/app_text_gray"
-                        android:textSize="17sp" />
+                        android:textColor="@color/app_text_dark_gray"
+                        android:textSize="@dimen/tv_size_30" />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1px"
-                        android:layout_marginTop="10dip"
                         android:background="@color/line_color" />
 
                     <LinearLayout

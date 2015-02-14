@@ -5,77 +5,36 @@
     android:orientation="vertical" >
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        style="@style/headLayoutStyle"
         android:layout_height="wrap_content"
-        android:background="@color/home_top_bg"
-        android:orientation="horizontal"
-        android:paddingBottom="6dip"
-        android:paddingLeft="16dip"
-        android:paddingRight="11dip"
-        android:paddingTop="6dip" >
+        android:layout_marginBottom="0dip"
+        android:paddingTop="@dimen/header_paddingTop"
+        android:paddingBottom="@dimen/header_paddingTop"
+        android:paddingLeft="@dimen/header_back_margin"
+        android:paddingRight="@dimen/header_back_margin" >
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="0dip"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1.0" >
+            android:layout_weight="1.0"
+            android:background="@drawable/common_input_bg"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/common_input_bg"
-                android:focusableInTouchMode="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal" >
-
-                <Button
-                    android:id="@+id/home_homepage_btn_search_category"
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:layout_marginLeft="2.0dip"
-                    android:background="@drawable/home_search_category_bg_selector"
-                    android:visibility="gone" />
-
-                <EditText
-                    android:id="@+id/home_homepage_et_input"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20.0dip"
-                    android:layout_weight="1.0"
-                    android:background="@android:color/transparent"
-                    android:drawableLeft="@drawable/search_icon"
-                    android:focusable="false"
-                    android:gravity="left|center"
-                    android:hint="@string/search_good"
-                    android:imeOptions="actionSearch"
-                    android:paddingBottom="2.0dip"
-                    android:paddingLeft="6.0dip"
-                    android:paddingRight="2.0dip"
-                    android:paddingTop="2.0dip"
-                    android:singleLine="true"
-                    android:textColor="@color/main_default_black_text_color"
-                    android:textColorHint="@color/app_text_gray"
-                    android:textSize="16.0sp" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/login_code_del_imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="15.0dip"
-                android:drawableRight="@drawable/public_appraise_deleted"
-                android:visibility="gone" />
-        </RelativeLayout>
+            <EditText
+                android:id="@+id/home_homepage_et_input"
+                style="@style/inputStyle"
+                android:focusable="false"
+                android:hint="@string/search_good" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/btn_scan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="5dip"
-            android:layout_marginRight="5dip"
+            android:layout_marginLeft="@dimen/header_back_margin"
             android:background="@drawable/scan" />
     </LinearLayout>
 
@@ -121,12 +80,12 @@
                 android:id="@+id/tv_vip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/header_back_margin"
+                android:layout_marginTop="@dimen/header_back_margin"
                 android:text="会员精选"
-                android:layout_marginTop="10dip"
-                android:layout_marginLeft="10dip"
-                android:layout_marginBottom="15dip"
                 android:textColor="@color/title"
-                android:textSize="18sp" />
+                android:textSize="@dimen/tv_size_30" />
 
             <com.imooly.android.widget.CannotRollGridView
                 android:id="@+id/gd_ad"

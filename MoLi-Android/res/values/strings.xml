@@ -2,11 +2,11 @@
 <resources>
 
     <string name="app_name">魔力网</string>
-    <string name="text_tab_home">主页</string>
+    <string name="text_tab_home">首页</string>
     <string name="text_tab_category">分类</string>
     <string name="text_tab_store">实体店</string>
     <string name="text_tab_shopcart">购物车</string>
-    <string name="text_tab_mycenter">我的魔力</string>
+    <string name="text_tab_mycenter">魔力</string>
     <!--  -->
     <string name="button_backward">返回</string>
     <string name="button_submit">提交</string>

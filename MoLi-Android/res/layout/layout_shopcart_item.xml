@@ -2,18 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/white"
     android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
 
     <LinearLayout
         android:id="@+id/shop_item_title_layout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dip"
-        android:background="@color/white"
+        android:layout_marginTop="@dimen/dp_10"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingBottom="6dip"
-        android:paddingTop="6dip" >
+        android:paddingBottom="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_15" >
 
         <CheckBox
             android:id="@+id/shopcar_item_check"
@@ -28,26 +33,16 @@
             android:id="@+id/shopcar_item_name"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dip"
-            android:layout_marginTop="12dip"
-            android:text="疯丫头精品店"
             android:textColor="@color/title"
-            android:textSize="16sp" />
+            android:textSize="@dimen/tv_size_30" />
     </LinearLayout>
 
-    <LinearLayout
+    <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="@color/white"
-        android:orientation="vertical" >
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:layout_marginLeft="15dip"
-            android:layout_marginRight="15dip"
-            android:background="@color/line_color" />
-    </LinearLayout>
+        android:layout_marginLeft="@dimen/header_back_margin"
+        android:layout_marginRight="@dimen/header_back_margin"
+        android:background="@color/line_color" />
 
     <LinearLayout
         android:id="@+id/shopcar_subitem_layout"
@@ -57,7 +52,12 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="15dip"
+        android:layout_height="@dimen/header_back_margin"
         android:background="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
 
 </LinearLayout>

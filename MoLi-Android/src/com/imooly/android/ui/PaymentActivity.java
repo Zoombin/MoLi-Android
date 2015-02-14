@@ -30,9 +30,11 @@ public class PaymentActivity extends BaseActivity implements OnClickListener {
 	public static final String PAY_MONEY = "pay_money";// 接收付款金额（float）
 	public static final String GOOD_NAME = "pay_subject";// 商品名称
 	public static final String GOOD_INFO = "pay_body";// 商品详情
-
+	public static final String PAY_TYPE = "pay_type";
+	
 	private static final String TYPE_ALIPAY = "alipay";
 	private static final String TYPE_WEIXIN = "weixin";
+
 
 	private RelativeLayout ll_title;
 	private ImageView iv_back;
@@ -42,6 +44,13 @@ public class PaymentActivity extends BaseActivity implements OnClickListener {
 	private String mPayNo;
 	private String mGoodName;
 	private String mGoodInfo;
+	
+	public interface PayCallBack {
+		
+		public void onPaySuccess();
+
+		public void onPayFailed();
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -139,7 +148,24 @@ public class PaymentActivity extends BaseActivity implements OnClickListener {
 				Log.d("xxx", "notify url = " + url);
 
 				if (TextUtils.equals(type, TYPE_ALIPAY)) {
-					new AliPay(self).pay(mGoodName, mGoodInfo, mPayNo, String.valueOf(mPrice), url);
+					new AliPay(self).pay(mGoodName, mGoodInfo, mPayNo, String.valueOf(mPrice), url, new PayCallBack() {
+						
+						@Override
+						public void onPaySuccess() {
+							Intent intent = new Intent(self, PaymentSuccess.class);
+							intent.putExtra(PAYNO, mPayNo);
+							intent.putExtra(PAY_MONEY, mPrice);
+							intent.putExtra(PAY_TYPE, "支付宝");
+							self.startActivity(intent);
+						}
+						
+						@Override
+						public void onPayFailed() {
+							
+							self.startActivity(new Intent(self, PaymentFailed.class));
+						}
+					});
+					
 					return;
 				}
 

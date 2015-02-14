@@ -7,7 +7,6 @@ import java.util.List;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -24,7 +23,6 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.imooly.android.R;
-import com.imooly.android.Interface.RequestWebListener;
 import com.imooly.android.Net.Api;
 import com.imooly.android.Net.NetUtils.NetCallBack;
 import com.imooly.android.adapter.StoreHotListAdapter;
@@ -44,8 +42,6 @@ import com.imooly.android.entity.RspStoreCityList.City;
 import com.imooly.android.entity.RspStoreCityList.CityGroup;
 import com.imooly.android.entity.ServiceResult;
 import com.imooly.android.tool.Config;
-import com.imooly.android.ui.LoginActivity;
-import com.imooly.android.ui.MainActivity;
 import com.imooly.android.ui.SearchMapActivity;
 import com.imooly.android.ui.StoreDetailActivity;
 import com.imooly.android.ui.StoreSearchActivity;
@@ -73,7 +69,7 @@ public class StoreFragment extends BaseFragment implements OnClickListener {
 	public NoDataView noDataView;
 
 	RelativeLayout store_parent;
-	RelativeLayout ll_title_store;
+	LinearLayout ll_title_store;
 	ImageView location_mark;
 	CannotRollGridView store_modules;
 
@@ -126,15 +122,7 @@ public class StoreFragment extends BaseFragment implements OnClickListener {
 
 		store_parent = (RelativeLayout) mActivity.findViewById(R.id.store_parent);
 		// top View
-		ll_title_store = (RelativeLayout) mActivity.findViewById(R.id.ll_title_store);
-		// fragment重叠bug
-		ll_title_store.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				// 不做操作
-			}
-		});
+		ll_title_store = (LinearLayout) mActivity.findViewById(R.id.ll_title_store);
 
 		location_city = (TextView) mActivity.findViewById(R.id.location_city);
 		location_city.setOnClickListener(this);

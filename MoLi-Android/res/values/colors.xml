@@ -15,9 +15,6 @@
     <color name="pure_gray">#c6cfe9</color>
     <color name="pure_white">#fcfbfb</color>
     <color name="listview_three_bg">#dcdcdc</color>
-    <color name="btn_user_normal">#e95021</color>
-    <color name="btn_user_pressed">#949494</color>
-
     <!-- 标题栏返回按钮的背景颜色 -->
     <drawable name="button_backward_pressed">#40F64C99</drawable>
     <drawable name="button_backward_normal">#0000</drawable>
@@ -42,7 +39,6 @@
     <drawable name="button_caution_normal">#f559b1</drawable>
 
     <color name="main_default_black_text_color">#ff333333</color>
-    <color name="weak_text_color">#ff666666</color>
     <color name="common_orange_textcolor">#ffff6928</color>
     <color name="common_green_textcolor">#ff64b134</color>
     <color name="common_brwon_textcolor">#ff9b440a</color>

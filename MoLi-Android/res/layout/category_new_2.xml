@@ -2,20 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout_category2"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="55dip"
     android:orientation="vertical" >
 
     <TextView
         android:id="@+id/cate_tv_two"
         android:layout_width="wrap_content"
-        android:layout_height="26.0dip"
-        android:layout_marginBottom="15.0dip"
-        android:layout_marginLeft="15.0dip"
-        android:layout_marginTop="15.0dip"
-        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/header_back_margin"
+        android:layout_marginLeft="@dimen/header_back_margin"
+        android:layout_centerVertical="true"
         android:singleLine="true"
-        android:textColor="@color/weak_text_color"
-        android:textSize="18.0dip" />
+        android:textColor="@color/app_text_dark_gray"
+        android:textSize="@dimen/tv_size_34" />
 
     <ImageView
         android:id="@+id/cate_iv_delta"
@@ -30,9 +29,9 @@
         android:id="@id/cate_iv_line"
         android:layout_width="fill_parent"
         android:layout_height="1dip"
-        android:layout_below="@id/cate_tv_two"
-        android:layout_marginLeft="15dip"
-        android:layout_marginRight="15dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/header_back_margin"
+        android:layout_marginRight="@dimen/header_back_margin"
         android:background="@color/listview_three_bg" />
 
 </RelativeLayout>

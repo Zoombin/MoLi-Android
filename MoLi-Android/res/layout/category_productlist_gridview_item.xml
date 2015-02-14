@@ -8,53 +8,43 @@
         android:id="@+id/category_productlist_grid_item_frame"
         android:layout_width="0dip"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dip"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="5dip"
-        android:layout_marginTop="10dip"
-        android:layout_weight="1"
-        android:background="@drawable/product_list_item_bg_normal" >
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_10"
+        android:padding="1dip"
+        android:background="@drawable/list_white_stroke"
+        android:layout_weight="1" >
 
-        <LinearLayout
-            android:id="@+id/ll_grid_item_icon"
+        <ImageView
+            android:id="@+id/category_productlist_grid_item_icon"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="1px"
-            android:background="@drawable/list_stroke"
-            android:orientation="horizontal" >
-
-            <ImageView
-                android:id="@+id/category_productlist_grid_item_icon"
-                android:layout_width="fill_parent"
-                android:layout_height="160.0dip"
-                android:layout_margin="1px"
-                android:contentDescription="@null"
-                android:scaleType="fitCenter" />
-        </LinearLayout>
+            android:contentDescription="@null"
+            android:scaleType="fitCenter" />
 
         <TextView
             android:id="@+id/category_productlist_grid_item_title"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ll_grid_item_icon"
-            android:layout_marginLeft="8.0dip"
-            android:layout_marginRight="8.0dip"
-            android:layout_marginTop="8.0dip"
+            android:layout_below="@id/category_productlist_grid_item_icon"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5"
             android:gravity="center_vertical"
             android:lines="2"
             android:text=""
             android:textColor="@color/app_text_dark_gray"
-            android:textSize="18.0sp" />
+            android:textSize="@dimen/tv_size_26" />
 
         <RelativeLayout
             android:id="@+id/layout_price"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/category_productlist_grid_item_title"
-            android:layout_marginLeft="8dip"
-            android:layout_marginRight="8dip"
-            android:layout_marginTop="4dip" >
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5" >
 
             <TextView
                 android:id="@+id/category_productlist_grid_item_ad"
@@ -65,7 +55,7 @@
                 android:ellipsize="end"
                 android:text="价格："
                 android:textColor="@color/gray"
-                android:textSize="14.0sp" />
+                android:textSize="@dimen/tv_size_24" />
 
             <TextView
                 android:id="@+id/category_productlist_grid_item_price"
@@ -75,18 +65,18 @@
                 android:layout_toRightOf="@id/category_productlist_grid_item_ad"
                 android:singleLine="true"
                 android:textColor="@color/main_color"
-                android:textSize="18.0sp" />
+                android:textSize="@dimen/tv_size_26" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/layout_price"
-            android:layout_marginLeft="8dip"
-            android:layout_marginRight="8dip"
-            android:layout_marginTop="4dip"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5"
             android:gravity="center_vertical"
-            android:paddingBottom="8dip" >
+            android:paddingBottom="@dimen/dp_10" >
 
             <TextView
                 android:id="@+id/category_productlist_gird_item_salesvolume"
@@ -97,7 +87,7 @@
                 android:ellipsize="end"
                 android:text=""
                 android:textColor="@color/gray"
-                android:textSize="14.0sp" />
+                android:textSize="@dimen/tv_size_24" />
 
             <TextView
                 android:id="@+id/category_productlist_gird_item_highopinion"
@@ -106,7 +96,7 @@
                 android:layout_alignParentRight="true"
                 android:singleLine="true"
                 android:textColor="@color/gray"
-                android:textSize="14.0sp" />
+                android:textSize="@dimen/tv_size_24" />
         </RelativeLayout>
 
         <ImageView
@@ -123,52 +113,43 @@
         android:id="@+id/category_productlist_grid_item_frame2"
         android:layout_width="0.0dip"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dip"
-        android:layout_marginRight="10dip"
-        android:layout_marginTop="10dip"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:padding="1dip"
         android:layout_weight="1"
-        android:background="@drawable/product_list_item_bg_normal" >
+        android:background="@drawable/list_white_stroke" >
 
-        <LinearLayout
-            android:id="@+id/ll_grid_item_icon2"
+        <ImageView
+            android:id="@+id/category_productlist_grid_item_icon2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="1px"
-            android:background="@drawable/list_stroke"
-            android:orientation="horizontal" >
-
-            <ImageView
-                android:id="@+id/category_productlist_grid_item_icon2"
-                android:layout_width="fill_parent"
-                android:layout_height="160.0dip"
-                android:layout_margin="1px"
-                android:contentDescription="@null"
-                android:scaleType="fitCenter" />
-        </LinearLayout>
+            android:contentDescription="@null"
+            android:scaleType="fitCenter" />
 
         <TextView
             android:id="@+id/category_productlist_grid_item_title2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ll_grid_item_icon2"
-            android:layout_marginLeft="8.0dip"
-            android:layout_marginRight="8.0dip"
-            android:layout_marginTop="8.0dip"
+            android:layout_below="@id/category_productlist_grid_item_icon2"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5"
             android:gravity="center_vertical"
             android:lines="2"
             android:text=""
             android:textColor="@color/app_text_dark_gray"
-            android:textSize="18.0sp" />
+            android:textSize="@dimen/tv_size_26" />
 
         <RelativeLayout
             android:id="@+id/layout_price2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/category_productlist_grid_item_title2"
-            android:layout_marginLeft="8dip"
-            android:layout_marginRight="8dip"
-            android:layout_marginTop="4dip" >
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5" >
 
             <TextView
                 android:id="@+id/category_productlist_grid_item_ad2"
@@ -179,7 +160,7 @@
                 android:ellipsize="end"
                 android:text="价格："
                 android:textColor="@color/gray"
-                android:textSize="14.0sp" />
+                android:textSize="@dimen/tv_size_24" />
 
             <TextView
                 android:id="@+id/category_productlist_grid_item_price2"
@@ -189,18 +170,18 @@
                 android:layout_toRightOf="@id/category_productlist_grid_item_ad2"
                 android:singleLine="true"
                 android:textColor="@color/main_color"
-                android:textSize="18.0sp" />
+                android:textSize="@dimen/tv_size_26" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/layout_price2"
-            android:layout_marginLeft="8dip"
-            android:layout_marginRight="8dip"
-            android:layout_marginTop="4dip"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5"
             android:gravity="center_vertical"
-            android:paddingBottom="8dip" >
+            android:paddingBottom="@dimen/dp_10" >
 
             <TextView
                 android:id="@+id/category_productlist_gird_item_salesvolume2"
@@ -209,8 +190,9 @@
                 android:layout_alignParentLeft="true"
                 android:background="@android:color/transparent"
                 android:ellipsize="end"
+                android:text=""
                 android:textColor="@color/gray"
-                android:textSize="14.0sp" />
+                android:textSize="@dimen/tv_size_24" />
 
             <TextView
                 android:id="@+id/category_productlist_gird_item_highopinion2"
@@ -219,7 +201,7 @@
                 android:layout_alignParentRight="true"
                 android:singleLine="true"
                 android:textColor="@color/gray"
-                android:textSize="14.0sp" />
+                android:textSize="@dimen/tv_size_24" />
         </RelativeLayout>
 
         <ImageView

@@ -5,12 +5,10 @@
     android:background="@color/app_bg_color" >
 
     <!-- 头部 -->
-
     <RelativeLayout
-        android:id="@+id/ll_title_mycenter"
-        android:layout_width="match_parent"
-        android:layout_height="60dip"
-        android:background="@color/title_bg_color" >
+        android:id="@+id/ll_title_shopcart"
+        style="@style/headLayoutStyle"
+        android:layout_marginBottom="0dip" >
 
         <TextView
             android:id="@+id/tv_title"
@@ -18,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="@string/shop_cart_title"
-            android:textSize="22sp" />
+            android:textSize="@dimen/tv_size_34" />
 
         <TextView
             android:id="@+id/tv_right"
@@ -26,9 +24,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="15dip"
+            android:layout_marginRight="@dimen/header_back_margin"
             android:text="编辑"
-            android:textSize="18sp" />
+            android:textSize="@dimen/tv_size_30" />
 
         <View
             android:layout_width="match_parent"
@@ -43,7 +41,7 @@
         android:id="@+id/layout_loading"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@id/ll_title_mycenter"
+        android:layout_below="@id/ll_title_shopcart"
         android:visibility="visible" />
 
     <!-- 内容层 -->
@@ -52,7 +50,7 @@
         android:id="@+id/layout_shopcart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/ll_title_mycenter"
+        android:layout_below="@id/ll_title_shopcart"
         android:background="@color/app_bg_color"
         android:orientation="vertical"
         android:visibility="gone" >
@@ -65,13 +63,14 @@
                 android:id="@+id/scroll_shopcart"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="50dip"
                 android:scrollbars="none" >
 
                 <LinearLayout
                     android:id="@+id/ll_content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="50dip"
+                    android:paddingTop="@dimen/dp_10"
                     android:orientation="vertical" />
             </com.imooly.android.widget.pulltorefresh.PullToRefreshScrollView>
 
@@ -87,7 +86,7 @@
         android:id="@+id/layout_nodata"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@id/ll_title_mycenter"
+        android:layout_below="@id/ll_title_shopcart"
         android:visibility="gone" />
 
 </RelativeLayout>

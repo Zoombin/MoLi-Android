@@ -9,9 +9,9 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -27,6 +27,7 @@ import com.imooly.android.entity.RspStoreproFile;
 import com.imooly.android.entity.RspSuccessCommon;
 import com.imooly.android.entity.ServiceResult;
 import com.imooly.android.enums.ShareObject;
+import com.imooly.android.tool.Config;
 import com.imooly.android.widget.PullToRefreshListView;
 import com.imooly.android.widget.PullToRefreshListView.OnLoadMoreListener;
 import com.imooly.android.widget.ShareDialog;
@@ -91,6 +92,10 @@ public class StoreProActivity extends BaseActivity implements OnClickListener {
 		
 		lv_goodslist = (PullToRefreshListView) findViewById(R.id.lv_goodslist);
 		iv_businessbanner = (ImageView) findViewById(R.id.iv_businessbanner);
+		int width = Config.width;
+		int height = width * 120 / 640;
+		LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(width, height);
+		iv_businessbanner.setLayoutParams(params);
 		lv_goodslist.setOnLoadListener(new OnLoadMoreListener() {
 
 			@Override

@@ -111,6 +111,7 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" >
+
         </activity>
         <activity
             android:name="com.imooly.android.ui.SearchActivity"
@@ -136,7 +137,7 @@
             android:name="com.imooly.android.ui.LogoActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-            <intent-filter>
+                        <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -405,6 +406,21 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>
+
+        <!-- 个人中心 - 支付成功 -->
+        <activity
+            android:name="com.imooly.android.ui.PaymentSuccess"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <!-- 个人中心 - 支付失败-->
+        <activity
+            android:name="com.imooly.android.ui.PaymentFailed"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        
 
         <!-- 个人中心 - 会员特权 -->
         <activity

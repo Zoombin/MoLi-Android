@@ -9,6 +9,7 @@ import android.os.Message;
 import android.text.TextUtils;
 
 import com.alipay.sdk.app.PayTask;
+import com.imooly.android.ui.PaymentActivity.PayCallBack;
 import com.imooly.android.widget.Toast;
 
 public class AliPay {
@@ -23,6 +24,10 @@ public class AliPay {
 	// private static final int SDK_CHECK_FLAG = 2;
 
 	private Activity mActivity;
+	
+	private PayCallBack payCallBack;
+
+
 
 	public AliPay(Activity mActivity) {
 		this.mActivity = mActivity;
@@ -38,6 +43,7 @@ public class AliPay {
 				// 判断resultStatus 为“9000”则代表支付成功，具体状态码代表含义可参考接口文档
 				if (TextUtils.equals(resultStatus, "9000")) {
 					Toast.show(mActivity, "支付成功");
+					payCallBack.onPaySuccess();
 					// 判断resultStatus 为非“9000”则代表可能支付失败
 					// “8000”
 					// 代表支付结果因为支付渠道原因或者系统原因还在等待支付结果确认，最终交易是否成功以服务端异步通知为准（小概率状态）
@@ -46,7 +52,7 @@ public class AliPay {
 
 					} else {
 						Toast.show(mActivity, "支付失败");
-
+						payCallBack.onPayFailed();
 					}
 				}
 				break;
@@ -75,10 +81,10 @@ public class AliPay {
 	 * call alipay sdk pay. 调用SDK支付
 	 * 
 	 */
-	public void pay(String productName, String productInfo, String tradeNo, String price, String notifyUrl) {
+	public void pay(String productName, String productInfo, String tradeNo, String price, String notifyUrl, PayCallBack payCallBack) {
 
 		// String orderInfo = getOrderInfo("测试的商品", "该测试商品的详细描述", "0.01");
-
+		this.payCallBack = payCallBack;
 		String orderInfo = getOrderInfo(productName, productInfo, tradeNo, price, notifyUrl);
 
 		String sign = sign(orderInfo);
@@ -190,7 +196,7 @@ public class AliPay {
 
 		// 支付宝处理完请求后，当前页面跳转到商户指定页面的路径，可空
 		// orderInfo += "&return_url=\"m.alipay.com\"";
-		
+
 		orderInfo += "&return_url=" + "\"" + notifyUrl + "\"";
 
 		// 调用银行卡支付，需配置此参数，参与签名， 固定值

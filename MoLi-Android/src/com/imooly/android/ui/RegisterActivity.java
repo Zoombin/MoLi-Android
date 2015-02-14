@@ -71,7 +71,7 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int count, int after) {
 				if (TextUtils.isEmpty(s) || TextUtils.isEmpty(et_verifycode.getText())) {
-					btn_next.setBackgroundColor(getResources().getColor(R.color.btn_user_pressed));
+					btn_next.setBackgroundColor(getResources().getColor(R.color.btn_verifycode_pressed));
 				} else {
 					btn_next.setBackgroundResource(R.drawable.selector_btn_orange);
 				}
@@ -95,7 +95,7 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int count, int after) {
 				if (TextUtils.isEmpty(s) || TextUtils.isEmpty(et_user.getText())) {
-					btn_next.setBackgroundColor(getResources().getColor(R.color.btn_user_pressed));
+					btn_next.setBackgroundColor(getResources().getColor(R.color.btn_verifycode_pressed));
 				} else {
 					btn_next.setBackgroundResource(R.drawable.selector_btn_orange);
 				}

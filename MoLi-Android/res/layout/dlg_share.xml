@@ -20,7 +20,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="分享到..."
-                android:textColor="@color/weak_text_color"
+                android:textColor="@color/app_text_dark_gray"
                 android:textSize="20sp" />
 
             <ImageView

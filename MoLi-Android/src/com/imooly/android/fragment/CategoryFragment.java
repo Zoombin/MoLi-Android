@@ -50,7 +50,6 @@ import com.imooly.android.widget.LoadingView;
  */
 public class CategoryFragment extends BaseFragment implements OnClickListener {
 
-	private LinearLayout ll_title_category;
 	private RelativeLayout layout_category;
 	private LoadingView layout_loading;
 	private EditText home_homepage_et_input;
@@ -78,16 +77,6 @@ public class CategoryFragment extends BaseFragment implements OnClickListener {
 	GestureDetector gestureDetector;
 
 	private void createView(View v) {
-		ll_title_category = (LinearLayout) v.findViewById(R.id.ll_title_category);
-		// fragment重叠bug
-		ll_title_category.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View arg0) {
-				// 不做操作
-			}
-		});
-		
 		layout_category = (RelativeLayout) v.findViewById(R.id.layout_category);
 		layout_loading = (LoadingView) v.findViewById(R.id.layout_loading);
 
@@ -175,8 +164,10 @@ public class CategoryFragment extends BaseFragment implements OnClickListener {
 	}
 	
 	public void hideListView() {
-		oneadapter.selectedPosition = -1;
-		oneadapter.notifyDataSetChanged();
+		if (oneadapter != null) {
+			oneadapter.selectedPosition = -1;
+			oneadapter.notifyDataSetChanged();
+		}
 		category_line2.setVisibility(View.GONE);
 		category_line3.setVisibility(View.GONE);
 	}
