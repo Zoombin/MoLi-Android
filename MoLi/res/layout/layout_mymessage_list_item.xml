@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="12dip" >
+
+    <TextView
+        android:id="@+id/mymessage_item_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="公斤内个人计较过ID积极 发的"
+        android:textColor="@color/app_text_gray"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dip"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/mymessage_item_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/order_detail_status_online" />
+
+        <TextView
+            android:id="@+id/mymessage_item_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dip"
+            android:layout_gravity="center_vertical"
+            android:text="2014-04-01"
+            android:textColor="@color/app_text_gray"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

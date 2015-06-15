@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_result_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_result_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.imooly.android.widget.NoDataView
+            android:id="@+id/ll_nodata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" >
+        </com.imooly.android.widget.NoDataView>
+
+        <com.imooly.android.widget.QuickReturnListView
+            android:id="@+id/category_lv_product_list"
+            style="@style/common_listview_style"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@color/line_color"
+            android:fadingEdge="none"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <Button
+            android:id="@+id/btn_lv_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dip"
+            android:background="@drawable/list_page_num"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_lv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dip"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/btn_listview_back"
+            android:visibility="gone" />
+    </RelativeLayout>
+    
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/category_product_list_header" />
+
+</FrameLayout>

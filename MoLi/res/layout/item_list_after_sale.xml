@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp" >
+
+    <ImageView
+        android:id="@+id/image_after_sale"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/order_pic_bg"
+        android:padding="1px"
+        android:scaleType="fitCenter" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/text_after_sale"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/app_text_gray"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/text_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_after_sale"
+            android:layout_marginTop="6dip"
+            android:text="价格：￥95.00"
+            android:textColor="@color/app_text_gray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/text_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_after_sale"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dip"
+            android:layout_toRightOf="@id/text_price"
+            android:text="数量：2"
+            android:textColor="@color/app_text_gray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/text_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_number"
+            android:layout_marginTop="6dip"
+            android:text="状态已关闭"
+            android:textColor="@color/app_text_gray"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

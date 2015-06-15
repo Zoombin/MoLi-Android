@@ -1,0 +1,317 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        style="@style/headLayoutStyle" >
+
+        <ImageView
+            android:id="@+id/image_back"
+            style="@style/headBackStyle" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/headTitleStyle"
+            android:text="电子会员卡" />
+
+        <TextView
+            android:id="@+id/text_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="8dp"
+            android:text="刷新"
+            android:textColor="@color/selector_text_black_darker_gray"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+    <!-- above tilte -->
+
+    <RelativeLayout
+        android:id="@+id/relative_member_yes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_title"
+        android:visibility="invisible" >
+
+        <LinearLayout
+            android:id="@+id/ll_times"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <!-- time day -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/text_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="00"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/tv_size_50" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="天"
+                    android:textColor="@color/app_text_gray"
+                    android:textSize="@dimen/tv_size_24" />
+            </LinearLayout>
+
+            <!-- time hour -->
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/text_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:shadowColor="#FFFFFF"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="4"
+                    android:text="00"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/tv_size_50" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="时"
+                    android:textColor="@color/app_text_gray"
+                    android:textSize="@dimen/tv_size_24" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/line_color" />
+
+            <!-- time minute -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/text_minute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:shadowColor="#FFFFFF"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="4"
+                    android:text="00"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/tv_size_50" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="分"
+                    android:textColor="@color/app_text_gray"
+                    android:textSize="@dimen/tv_size_24" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/line_color" />
+
+            <!-- time second -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/text_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:shadowColor="#FFFFFF"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="4"
+                    android:text="00"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/tv_size_50" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="秒"
+                    android:textColor="@color/app_text_gray"
+                    android:textSize="@dimen/tv_size_24" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_yxq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll_times"
+            android:layout_centerHorizontal="true"
+            android:text="剩余有效期"
+            android:textColor="@color/app_text_gray"
+            android:textSize="@dimen/tv_size_36" />
+
+        <LinearLayout
+            
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/text_yxq"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_member_card"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="给收银员扫一扫完成魔力会员身份验证"
+                android:textColor="@color/app_text_gray"
+                android:textSize="@dimen/tv_size_24" />
+
+            <ImageView
+                android:id="@+id/image_top"
+                android:layout_width="240dp"
+                android:layout_height="@dimen/barcode_height"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="20dp"
+                android:adjustViewBounds="false"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_error_member" />
+
+            <ImageView
+                android:id="@+id/image_bottom"
+                android:layout_width="@dimen/dbarcode_width"
+                android:layout_height="@dimen/dbarcode_height"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_error" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_member_no"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_title"
+        android:visibility="invisible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/image_cartoon_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_member_cartoon_logo" />
+
+            <TextView
+                android:id="@+id/text_not_vip_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="您还不是魔力网会员哦！"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/tv_size_46" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="点此"
+                    android:textColor="@color/app_text_gray"
+                    android:textSize="@dimen/tv_size_24" />
+
+                <TextView
+                    android:id="@+id/text_member_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/member_right"
+                    android:textColor="@color/app_text_dark_gray"
+                    android:textSize="@dimen/tv_size_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="或者点此"
+                    android:textColor="@color/app_text_gray"
+                    android:textSize="@dimen/tv_size_24" />
+
+                <TextView
+                    android:id="@+id/text_join"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/member_join"
+                    android:textColor="@color/app_text_dark_gray"
+                    android:textSize="@dimen/tv_size_24" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

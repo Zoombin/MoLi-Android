@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/body"
+        style="@style/common_scrollbar_style"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="right"
+        android:layout_marginLeft="60.0dip"
+        android:layout_weight="1"
+        android:background="@color/app_bg_color"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/layout_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_white_bottom_bg"
+                android:orientation="vertical"
+                android:padding="8dip" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="价格"
+                        android:textColor="@color/app_text_dark_gray"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/filter_price_from"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:layout_marginLeft="5dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/order_edit_bg"
+                        android:gravity="center"
+                        android:hint="0"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dip"
+                        android:layout_marginRight="6dip"
+                        android:text="一"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/filter_price_to"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/order_edit_bg"
+                        android:gravity="center"
+                        android:hint="00"
+                        android:minWidth="80dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_price_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="3dip"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dip"
+                android:layout_marginTop="12dip"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/layout_filter_has_goods"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layout_white_bg"
+                    android:orientation="horizontal"
+                    android:padding="12dip" >
+
+                    <TextView
+                        android:id="@+id/txt_filter_has_goods"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="仅显示有货商品"
+                        android:textColor="@drawable/comm_text_selector"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/bt_filter_has_goods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/filter_bt_style" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_filter_has_voucher"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dip"
+                    android:background="@drawable/layout_white_bg"
+                    android:orientation="horizontal"
+                    android:padding="12dip" >
+
+                    <TextView
+                        android:id="@+id/txt_filter_has_voucher"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="能获得代金券"
+                        android:textColor="@drawable/comm_text_selector"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/bt_filter_has_voucher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/filter_bt_style" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_white_bottom_bg"
+                android:orientation="horizontal"
+                android:padding="12dip" >
+
+                <TextView
+                    android:id="@+id/address_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="发货地"
+                    android:textColor="@color/app_text_gray"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/address_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/address_arrow"
+                    android:text="不限"
+                    android:textColor="@color/main_color"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/address_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_arrow_right" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lv_filter"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/layout_white_bg"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60.0dip"
+        android:background="#F6F6F6"
+        android:padding="8dip" >
+
+        <Button
+            android:id="@+id/bottom_clear_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginRight="5dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/reserve_gray_btn_selector"
+            android:text="清空筛选"
+            android:textColor="@color/app_text_dark_gray"
+            android:textSize="16.0sp" />
+
+        <Button
+            android:id="@+id/bottom_submit_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="20dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/reserve_red_btn_selector"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+</LinearLayout>

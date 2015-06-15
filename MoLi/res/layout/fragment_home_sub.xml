@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.imooly.android.widget.autoscrollviewpager.AutoScrollViewPager
+            android:id="@+id/viewpager_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.imooly.android.widget.viewpage.CirclePageIndicator
+            android:id="@+id/home_page_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dip"
+            android:padding="10dip" />
+    </RelativeLayout>
+
+    <com.imooly.android.widget.CannotRollGridView
+        android:id="@+id/gd_modules"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="4" />
+
+    <TextView
+        android:id="@+id/tv_vip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="会员精选"
+        android:textColor="@color/title"
+        android:textSize="@dimen/tv_size_30" />
+
+    <com.imooly.android.widget.CannotRollGridView
+        android:id="@+id/gd_ad"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@android:color/transparent" />
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_title"
+        style="@style/headLayoutStyle" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/headBackStyle" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/headTitleStyle"
+            android:text="找回交易密码" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/et_user"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_height"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/margin_top_40"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/label_marginleft"
+        android:singleLine="true"
+        android:textColor="@color/app_text_dark_gray"
+        android:textSize="@dimen/tv_size_26" />
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_height"
+        android:background="@color/white" >
+
+        <EditText
+            android:id="@+id/et_verifycode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:focusable="true"
+            android:hint="@string/hint_verification"
+            android:inputType="number"
+            android:paddingLeft="@dimen/label_marginleft"
+            android:singleLine="true"
+            android:textColor="@color/app_text_dark_gray"
+            android:textColorHint="@color/app_text_gray"
+            android:textSize="@dimen/tv_size_26" />
+
+        <Button
+            android:id="@+id/btn_verifycode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/label_marginleft"
+            android:background="@drawable/btn_round_red"
+            android:padding="4dp"
+            android:text="@string/register_verifycode"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/label_button_height"
+        android:layout_marginTop="@dimen/margin_top_30"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tv_size_34" />
+
+</LinearLayout>

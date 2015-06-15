@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_white_bottom_bg"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:textColor="@color/app_text_gray"
+            android:textSize="@dimen/tv_size_32" />
+
+        <TextView
+            android:id="@+id/tv_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/arrow_right"
+            android:layout_toRightOf="@id/tv_title"
+            android:gravity="right"
+            android:maxLines="1"
+            android:text="不限"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/tv_size_24" />
+
+        <ImageView
+            android:id="@+id/arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_arrow_right" />
+
+        <!-- 只是为了撑开保持和（代金券高度一样,需要的画就设置invisible） -->
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/shop_ckbox_style"
+            android:clickable="false"
+            android:enabled="false"
+            android:focusable="false"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sub_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dip"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+    </LinearLayout>
+
+</LinearLayout>

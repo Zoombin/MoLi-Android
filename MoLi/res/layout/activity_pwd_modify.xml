@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_title"
+        style="@style/headLayoutStyle" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/headBackStyle" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/headTitleStyle"
+            android:text="修改密码" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_old_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_height"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/margin_top_40"
+        android:background="@color/white"
+        android:focusable="true"
+        android:hint="旧密码"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textColor="@color/app_text_dark_gray"
+        android:textColorHint="@color/app_text_gray"
+        android:textSize="@dimen/tv_size_26" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <EditText
+        android:id="@+id/et_new_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_height"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white"
+        android:focusable="true"
+        android:hint="新密码"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textColor="@color/app_text_dark_gray"
+        android:textColorHint="@color/app_text_gray"
+        android:textSize="@dimen/tv_size_26" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <EditText
+        android:id="@+id/et_confirm_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_height"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white"
+        android:focusable="true"
+        android:hint="重复新密码"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textColor="@color/app_text_dark_gray"
+        android:textColorHint="@color/app_text_gray"
+        android:textSize="@dimen/tv_size_26" />
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/label_button_height"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/selector_btn_orange"
+        android:gravity="center"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tv_size_34" />
+
+</LinearLayout>

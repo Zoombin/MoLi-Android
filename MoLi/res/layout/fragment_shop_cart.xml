@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color" >
+
+    <!-- 头部 -->
+
+    <RelativeLayout
+        android:id="@+id/ll_title_shopcart"
+        style="@style/headLayoutStyle"
+        android:layout_marginBottom="0dip" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/shop_cart_title"
+            android:textSize="@dimen/tv_size_34" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/header_back_margin"
+            android:text="编辑"
+            android:textSize="@dimen/tv_size_30" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+    <!-- 没有数据层 -->
+
+    <com.imooly.android.widget.NoDataView
+        android:id="@+id/layout_nodata_shop"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/ll_title_shopcart" />
+
+    <!-- 内容层 -->
+
+    <LinearLayout
+        android:id="@+id/layout_shopcart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_title_shopcart"
+        android:background="@color/app_bg_color"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.imooly.android.widget.in.srain.cube.views.ptr.PtrClassicFrameLayout
+                xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/scroll_shopcart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/shopcar_footer"
+                cube_ptr:ptr_duration_to_close="160"
+                cube_ptr:ptr_duration_to_close_header="200"
+                cube_ptr:ptr_keep_header_when_refresh="true"
+                cube_ptr:ptr_pull_to_fresh="false"
+                cube_ptr:ptr_ratio_of_header_height_to_refresh="1.0"
+                cube_ptr:ptr_resistance="1.6" >
+
+                <ScrollView
+                    android:id="@+id/grid_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fadingEdge="none"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </ScrollView>
+            </com.imooly.android.widget.in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+            <include
+                android:id="@+id/shopcar_footer"
+                layout="@layout/layout_shopcart_footer" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

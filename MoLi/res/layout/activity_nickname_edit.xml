@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        style="@style/headLayoutStyle" >
+
+        <ImageView
+            android:id="@+id/button_back"
+            style="@style/headBackStyle" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/headTitleStyle"
+            android:text="昵称修改" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+    <!-- nickname -->
+
+    <RelativeLayout
+        android:id="@+id/rl_portrait"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_button_height"
+        android:layout_marginTop="@dimen/margin_top_40"
+        android:background="@android:color/white" >
+
+        <TextView
+            android:id="@+id/text_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="昵称"
+            android:textColor="@color/app_text_gray"
+            android:textSize="@dimen/tv_size_30" />
+
+        <com.imooly.android.widget.CleanableEditText
+            android:id="@+id/edit_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@id/text_nickname"
+            android:background="@drawable/bg_edit_nickname"
+            android:drawableRight="@drawable/ic_delet_normal"
+            android:focusable="true"
+            android:hint="请输入昵称"
+            android:inputType="text"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:singleLine="true"
+            android:textColor="@color/app_text_black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/tv_size_30" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <Button
+        android:id="@+id/button_nickname_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/label_button_height"
+        android:layout_marginTop="@dimen/margin_top_40"
+        android:background="@drawable/selector_btn_orange"
+        android:gravity="center"
+        android:text="确定修改"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/tv_size_34" />
+
+</LinearLayout>

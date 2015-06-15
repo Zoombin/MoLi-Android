@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/headLayoutStyle"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dip"
+        android:paddingBottom="@dimen/header_paddingTop"
+        android:paddingLeft="@dimen/header_back_margin"
+        android:paddingRight="@dimen/header_back_margin"
+        android:paddingTop="@dimen/header_paddingTop" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/common_input_bg"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/home_homepage_et_input"
+                style="@style/inputStyle"
+                android:focusable="false"
+                android:hint="@string/search_good" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/header_back_margin"
+            android:background="@drawable/scan" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 没有数据层 (显示没网的情况) -->
+
+        <com.imooly.android.widget.NoDataView
+            android:id="@+id/layout_nodata_home"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <!-- 内容层 -->
+
+
+        <!--
+             <com.imooly.android.widget.pulltorefresh.PullScrollView
+            android:id="@+id/layout_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_bg_color"
+            android:scrollbars="none" />
+        -->
+
+        <com.imooly.android.widget.in.srain.cube.views.ptr.PtrClassicFrameLayout
+            xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/layout_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            cube_ptr:ptr_duration_to_close="160"
+            cube_ptr:ptr_duration_to_close_header="200"
+            cube_ptr:ptr_keep_header_when_refresh="true"
+            cube_ptr:ptr_pull_to_fresh="false"
+            cube_ptr:ptr_ratio_of_header_height_to_refresh="1.0"
+            cube_ptr:ptr_resistance="1.6" >
+
+            <ScrollView
+                android:id="@+id/grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadingEdge="none"
+                android:scrollbars="none" >
+
+                <include layout="@layout/fragment_home_sub" />
+            </ScrollView>
+        </com.imooly.android.widget.in.srain.cube.views.ptr.PtrClassicFrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

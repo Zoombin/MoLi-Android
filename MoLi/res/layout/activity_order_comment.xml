@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_title"
+        style="@style/headLayoutStyle" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/headBackStyle" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/headTitleStyle"
+            android:text="@string/order_comment_title" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_20"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/order_comment_commit" >
+
+            <LinearLayout
+                android:id="@+id/content_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/order_comment_commit"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/footer_height"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/selector_btn_orange"
+            android:gravity="center"
+            android:text="确认评价"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_size_34" />
+    </RelativeLayout>
+
+</LinearLayout>

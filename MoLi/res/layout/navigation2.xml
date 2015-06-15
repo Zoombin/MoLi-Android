@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ee86a6"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/navigation_p2_bg" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="化繁为简，一卡搞定"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/ll_navigation2_anim_part1"
+        layout="@layout/navigation2_part1" />
+
+    <ImageView
+        android:id="@+id/iv_navigation2_anim_part2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_margin="30dip"
+        android:scaleType="fitCenter"
+        android:src="@drawable/navigation_p2_part2"
+        android:visibility="gone" />
+
+</RelativeLayout>

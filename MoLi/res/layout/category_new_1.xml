@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_category1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:gravity="center_vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_category_item_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/cate_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10.0dip"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="15.0dip"
+            android:layout_marginTop="10.0dip" >
+
+            <ImageView
+                android:id="@+id/cate_iv_logo"
+                android:layout_width="51.0dip"
+                android:layout_height="51.0dip"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/cate_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/cate_iv_main"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:maxEms="10"
+                android:singleLine="true"
+                android:textColor="@color/title"
+                android:textSize="@dimen/tv_size_34" />
+
+            <TextView
+                android:id="@+id/cate_iv_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="1.0dip"
+                android:maxEms="15"
+                android:singleLine="true"
+                android:textColor="@color/app_text_gray"
+                android:textSize="@dimen/tv_size_26" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/cate_iv_delta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="71dip"
+        android:background="@drawable/category_iv_delta"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/cate_iv_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_category_item_1"
+        android:layout_marginLeft="@dimen/header_back_margin"
+        android:layout_marginRight="@dimen/header_back_margin"
+        android:background="@drawable/cate_line1" />
+
+</RelativeLayout>

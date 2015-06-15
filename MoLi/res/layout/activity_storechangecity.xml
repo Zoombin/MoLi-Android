@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_title"
+        style="@style/headLayoutStyle" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/headBackStyle" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/headTitleStyle"
+            android:text="商家、商圈分类" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" 
+        android:layout_marginTop="@dimen/margin_top_20">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="当前定位的城市为"
+                android:textColor="@color/app_text_gray"
+                android:textSize="@dimen/tv_size_24" />
+
+            <TextView
+                android:id="@+id/tv_location_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_corner_select"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_5"
+                android:text="苏州"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_size_26" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="全部城市"
+            android:textColor="@color/title"
+            android:textSize="@dimen/tv_size_30" />
+
+        <GridView
+            android:id="@+id/city_glist"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dip"
+            android:cacheColorHint="#00000000"
+            android:divider="#00000000"
+            android:gravity="center"
+            android:horizontalSpacing="10dip"
+            android:listSelector="#00000000"
+            android:numColumns="3"
+            android:padding="6dip"
+            android:verticalSpacing="10dip" >
+        </GridView>
+    </LinearLayout>
+
+</LinearLayout>

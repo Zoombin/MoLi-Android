@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00000000"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#00000000"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#f6efefef"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_grid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:layout_marginTop="20dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="12dip"
+                    android:text="没有可选择的商圈"
+                    android:textColor="@color/app_text_dark_gray"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <GridView
+                    android:id="@+id/comm_glist"
+                    android:layout_width="fill_parent"
+                    android:layout_height="250dip"
+                    android:layout_gravity="center"
+                    android:cacheColorHint="#00000000"
+                    android:divider="#00000000"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dip"
+                    android:listSelector="#00000000"
+                    android:numColumns="3"
+                    android:verticalSpacing="10dip" >
+                </GridView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="20dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:background="#f5dbdbdb" />
+
+            <LinearLayout
+                android:id="@+id/ll_curcity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginLeft="6dip"
+                android:layout_marginRight="6dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_curcity"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="当前城市："
+                    android:textColor="@color/app_text_gray"
+                    android:textSize="@dimen/tv_size_24" />
+
+                <TextView
+                    android:id="@+id/tv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="2dip"
+                    android:drawableRight="@drawable/ic_arrow_right"
+                    android:text="切换"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/tv_size_24" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

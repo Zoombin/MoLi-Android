@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/head_contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/iv_refresh_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/refresh_bg" />
+
+        <LinearLayout
+            android:id="@+id/ptr_classic_header_rotate_view_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <!-- 箭头 -->
+
+            <ImageView
+                android:id="@+id/ptr_classic_header_rotate_view"
+                android:layout_width="14dip"
+                android:layout_height="14dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/refresh_arrow" />
+
+            <!-- 进度 -->
+
+            <ProgressBar
+                android:id="@+id/ptr_classic_header_rotate_view_progressbar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateDrawable="@drawable/custom_pro"
+                android:visibility="gone" />
+
+            <!-- 提示 -->
+
+            <TextView
+                android:id="@+id/ptr_classic_header_rotate_view_header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:textSize="14sp" />
+
+            <!-- 最后更新时间 -->
+
+            <TextView
+                android:id="@+id/ptr_classic_header_rotate_view_header_last_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="#999999"
+                android:textSize="10sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

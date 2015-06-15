@@ -1,0 +1,184 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        style="@style/headLayoutStyle" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/headBackStyle" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/headTitleStyle"
+            android:text="关于我们" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+    <!-- above title -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_40" >
+
+        <ImageView
+            android:id="@+id/image_app_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/label_marginleft"
+            android:scaleType="fitXY"
+            android:src="@drawable/app_icon" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/image_app_icon"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/text_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="魔力网For Android"
+                android:textSize="@dimen/tv_size_30" />
+
+            <TextView
+                android:id="@+id/text_version_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/app_text_gray"
+                android:textSize="@dimen/tv_size_28" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- copy right= -->
+
+    <RelativeLayout
+        android:id="@+id/rl_copyright_infomation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_height"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/selector_bg_label"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/text_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/label_marginleft"
+            android:text="版权信息"
+            android:textColor="@color/app_text_dark_gray"
+            android:textSize="@dimen/tv_size_30" />
+
+        <Button
+            android:id="@+id/btn_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/label_marginright"
+            android:background="@drawable/ic_arrow_right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:id="@+id/rl_sofeware_licence"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_height"
+        android:background="@drawable/selector_bg_label"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/text_modify_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/label_marginleft"
+            android:text="软件使用许可协议"
+            android:textColor="@color/app_text_dark_gray"
+            android:textSize="@dimen/tv_size_30" />
+
+        <Button
+            android:id="@+id/btn_modify_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/label_marginright"
+            android:background="@drawable/ic_arrow_right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:id="@+id/rl_declare"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_height"
+        android:background="@drawable/selector_bg_label"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/text_pay_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/label_marginleft"
+            android:text="说明"
+            android:textColor="@color/app_text_dark_gray"
+            android:textSize="@dimen/tv_size_30" />
+
+        <Button
+            android:id="@+id/btn_pay_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/label_marginright"
+            android:background="@drawable/ic_arrow_right" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_aboutus_update"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_button_height"
+        android:layout_marginTop="@dimen/margin_top_40"
+        android:background="@drawable/selector_bg_label_call"
+        android:gravity="center"
+        android:text="检测更新"
+        android:textColor="@color/app_text_gray"
+        android:textSize="@dimen/tv_size_34" />
+
+</LinearLayout>

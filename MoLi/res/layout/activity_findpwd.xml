@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_title"
+        style="@style/headLayoutStyle" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/headBackStyle" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/headTitleStyle"
+            android:text="@string/find_password" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_user"
+        style="@style/editTextStyle"
+        android:layout_marginTop="@dimen/margin_top_40"
+        android:hint="@string/hint_user"
+        android:inputType="number" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/et_verifycode"
+            style="@style/editTextStyle"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:hint="@string/hint_verification"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btn_verifycode"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/btn_round_red"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="@string/register_verifycode"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_size_24" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <Button
+        android:id="@+id/btn_next"
+        style="@style/btnUserStyle"
+        android:layout_marginTop="@dimen/margin_top_30"
+        android:background="@color/gray"
+        android:text="@string/next" />
+
+</LinearLayout>

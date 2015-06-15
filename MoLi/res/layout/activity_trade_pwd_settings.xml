@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_title"
+        style="@style/headLayoutStyle" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/headBackStyle" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/headTitleStyle"
+            android:text="设置交易密码" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+    <!-- above title -->
+
+    <EditText
+        android:id="@+id/et_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_height"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/margin_top_40"
+        android:background="@color/white"
+        android:focusable="true"
+        android:hint="设置交易密码"
+        android:inputType="textPassword"
+        android:paddingLeft="@dimen/label_marginleft"
+        android:singleLine="true"
+        android:textColor="@color/app_text_dark_gray"
+        android:textColorHint="@color/app_text_gray"
+        android:textSize="@dimen/tv_size_26" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <EditText
+        android:id="@+id/et_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_height"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white"
+        android:focusable="true"
+        android:hint="确认交易密码"
+        android:inputType="textPassword"
+        android:paddingLeft="@dimen/label_marginleft"
+        android:singleLine="true"
+        android:textColor="@color/app_text_dark_gray"
+        android:textColorHint="@color/app_text_gray"
+        android:textSize="@dimen/tv_size_26" />
+
+    <Button
+        android:id="@+id/btn_sure"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/margin_top_30"
+        android:background="@drawable/selector_btn_orange"
+        android:gravity="center"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tv_size_34" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/label_marginleft"
+        android:layout_marginTop="@dimen/margin_top_30"
+        android:text="温馨提示："
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/tv_size_24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/label_marginleft"
+        android:text="交易密码用来确认收货和代金券的支付，与下订单时的现金支付无关，请妥善保管！"
+        android:textColor="@color/app_text_gray"
+        android:textSize="@dimen/tv_size_24" />
+
+</LinearLayout>

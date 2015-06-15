@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">魔力网</string>
+    <string name="text_tab_home">首页</string>
+    <string name="text_tab_category">分类</string>
+    <string name="text_tab_store">实体店</string>
+    <string name="text_tab_shopcart">购物车</string>
+    <string name="text_tab_mycenter">我的魔力</string>
+    <!--  -->
+    <string name="button_backward">返回</string>
+    <string name="button_submit">提交</string>
+    <string name="hint_user">请输入您的手机号</string>
+    <string name="hint_password">请输入您的密码</string>
+    <string name="hint_password_confirm">请再次输入密码</string>
+    <string name="hint_verification">请输入验证码</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="confirm">确定</string>
+    <string name="register_phone">手机注册</string>
+    <string name="changepwd_phone_info">您找回密码的手机号是:</string>
+    <string name="register_phone_info">您本次注册手机号是:</string>
+    <string name="register_agreement">同意《魔力用户注册协议》</string>
+    <string name="register_verifycode">点击获取手机验证码</string>
+    <string name="next">下一步</string>
+    <string name="get_verification_code">获取验证码</string>
+    <string name="agreement">同意 </string>
+    <string name="service_agreement">服务协议 </string>
+    <string name="find_password">找回密码 </string>
+    <string name="fastregister">快速注册</string>
+    <string name="forget_password">忘记密码?</string>
+    <string name="get_verifycode">秒后重新获得</string>
+    <string name="order_title">全部订单</string>
+    <string name="order_option_all">全部</string>
+    <string name="order_option_nonpay">待付款</string>
+    <string name="order_option_nondeliver">待发货</string>
+    <string name="order_option_nonhold">待收货</string>
+    <string name="order_option_noncomment">待评价</string>
+    <string name="order_noncomment_content_hint">嗨，来两句吧!</string>
+    <string name="order_confirm_dialog_title">确认收货</string>
+    <string name="order_detail_title">订单详情</string>
+    <string name="order_detail_ads_txt">收货信息</string>
+    <string name="order_detail_order_status_txt">订单状态</string>
+    <string name="order_logistics_title">物流详情</string>
+    <string name="order_comment_title">评价订单</string>
+    <string name="order_service_title">售后服务</string>
+    <string name="order_service_backtrack_title">换货物流</string>
+    <string name="order_backtrack_addr">商家收货地址</string>
+    <string name="order_backtrack_name">收货人姓名</string>
+    <string name="order_backtrack_phone">发货人手机号</string>
+    <string name="store_search_result_title">商家</string>
+    <string name="store_comment_title">实体店评价</string>
+    <string name="store_detail_title">实体折扣店</string>
+    <string name="store_detail_describe">在官方网站上购物可获得积分，每消费一元钱积分可增加一分，不足1分按1分计算，不同级别的会友可享受不同级别的购物积分!</string>
+    <string name="app_agreement">魔力用户协议</string>
+    <string name="warning_user_name">电话号码格式不对</string>
+    <string name="warning_password">密码格式不对</string>
+    <string name="cancel">取消</string>
+    <string name="search_good"> 查找商品</string>
+    <string name="store_search_hint">输入商家、分类或商圈</string>
+    <string name="click_get_verification">点击获取手机验证码</string>
+    <string name="now_not_have_price">暂无价格</string>
+    <string name="appMeas_special">掌上专享</string>
+    <string name="filter">筛选</string>
+    <string name="product_detail">商品详情</string>
+    <string name="product_hot">热度</string>
+    <string name="product_sale">销量</string>
+    <string name="product_price">价格</string>
+    <string name="product_time">时间</string>
+    <string name="back" />
+    <string name="hot_search_tab">热门搜索</string>
+    <string name="recently_search_tab">最近搜索</string>
+    <string name="remove_all_browse_history">清空浏览历史</string>
+    <string name="list_loading">下拉加载</string>
+    <string name="comment_title">商品评价</string>
+    <string name="store_comment_better">好评</string>
+    <string name="store_comment_medium">中评</string>
+    <string name="store_comment_worst">差评</string>
+    <string name="fillorder_title">填写订单</string>
+    <string name="fillorder_voucher_format">此次购物成功后共获得%1$s元代金券</string>
+    <string name="pick_photo">从相册选择</string>
+    <string name="pick_camera">拍照</string>
+    <string name="personal_center_footstep">我的足迹</string>
+    <string name="personal_center_tvright">清空</string>
+    <string name="personal_center_mymessage">我的消息</string>
+    <string name="personal_center_myvoucher">代金券</string>
+    <string name="shop_cart_title">购物车</string>
+    <string name="pull_to_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新…</string>
+    <string name="not_updated_yet">暂未更新过</string>
+    <string name="updated_at">上次更新于%1$s前</string>
+    <string name="updated_just_now">刚刚更新</string>
+    <string name="time_error">时间有问题</string>
+    <string name="tips_click_refresh">点击重新加载</string>
+
+    <!-- 分享组件 -->
+    <string name="share_dlg_qq">腾讯QQ</string>
+    <string name="share_dlg_weibo">新浪微博</string>
+    <string name="share_dlg_circle_of_friends">朋友圈</string>
+    <string name="share_dlg_weixin">微信</string>
+    <string name="share_dlg_qqzone">空间</string>
+
+    <!-- 会员 中心 -->
+    <string name="member_right"><u>了解会员特权</u></string>
+    <string name="member_join"><u>加入会员</u></string>
+    <string name="scan_tips">将条形码/二维码放入框内，即可自动扫描</string>
+    <string name="p2refresh_head_load_more">加载更多</string>
+    <string name="p2refresh_end_load_more">更    多</string>
+    <string name="p2refresh_end_click_load_more">点击加载</string>
+    <string name="p2refresh_end_no_more_data">您已经看到最后了</string>
+    <string name="p2refresh_release_refresh">松开立即刷新</string>
+    <string name="p2refresh_pull_to_refresh">下拉刷新</string>
+    <string name="p2refresh_doing_head_refresh">正在刷新&#8230;</string>
+    <string name="p2refresh_doing_end_refresh">加载中&#8230;</string>
+    <string name="p2refresh_refresh_lasttime">最近更新&#160;&#058;&#160;</string>
+    
+    <!-- 其他-->
+    <string name="not_set_just_go"><u>不设置，直接逛 </u></string>
+
+</resources>

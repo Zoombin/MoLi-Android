@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:background="@drawable/layout_white_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_add_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_bg_label"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/order_dash_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/fillorder_add_address"
+                    android:drawablePadding="6dip"
+                    android:gravity="center"
+                    android:padding="12dip"
+                    android:text="添加地址"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/tv_size_28" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/order_dash_line" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/layout_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            layout="@layout/layout_store_fillorder_address"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

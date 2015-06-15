@@ -1,0 +1,237 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        style="@style/headLayoutStyle" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/headBackStyle" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/headTitleStyle"
+            android:text="代金券" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+    <!-- above title -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linear_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_positive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/main_color"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/text_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="代金券总金额（元）"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/text_voucher_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="50sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="matrix"
+                    android:src="@drawable/ic_vouncher_orange_line" />
+            </LinearLayout>
+
+            <!-- 以上为正面 -->
+            <!-- 以下为反面 -->
+
+            <LinearLayout
+                android:id="@+id/ll_negative"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#01AFB0"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="20dp"
+                        android:text="代金券使用细则"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tv_size_30" />
+
+                    <TextView
+                        android:id="@+id/text_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:ellipsize="end"
+                        android:lineSpacingMultiplier="1.3"
+                        android:singleLine="true"
+                        android:text="1.购买代金券的商品，确认收货后可以领取代金券"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tv_size_24" />
+
+                    <TextView
+                        android:id="@+id/text_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:ellipsize="end"
+                        android:lineSpacingMultiplier="1.3"
+                        android:singleLine="true"
+                        android:text="2.取代金券的订单不可以申请退换货"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tv_size_24" />
+
+                    <TextView
+                        android:id="@+id/text_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:ellipsize="end"
+                        android:lineSpacingMultiplier="1.3"
+                        android:singleLine="true"
+                        android:text="3.代金券不可以兑现，代金券支付的部分不开发票"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tv_size_24" />
+
+                    <TextView
+                        android:id="@+id/text_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:ellipsize="end"
+                        android:lineSpacingMultiplier="1.3"
+                        android:singleLine="true"
+                        android:text="4.代金券最终解释权归江苏魔力网络有限公司所有"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tv_size_24" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="matrix"
+                    android:src="@drawable/ic_vouncher_blue_line" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_flip_card"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textColor="#525252"
+                android:text="点击翻开查看使用细则"
+                android:textSize="@dimen/tv_size_24" />
+        </LinearLayout>
+
+        <!-- 以上为反面 -->
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_get_vouncher"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_height"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_bg_label"
+        android:clickable="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/label_marginleft"
+            android:layout_toRightOf="@id/image_message_left"
+            android:text="领取代金券"
+            android:textColor="@color/app_text_gray"
+            android:textSize="@dimen/tv_size_30" />
+
+        <ImageView
+            android:id="@+id/image_message_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_arrow_right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:id="@+id/relative_vouncher_detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_height"
+        android:background="@drawable/selector_bg_label"
+        android:clickable="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/label_marginleft"
+            android:layout_toRightOf="@id/image_alipay"
+            android:text="代金券使用明细"
+            android:textColor="@color/app_text_gray"
+            android:textSize="@dimen/tv_size_30" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_arrow_right" />
+    </RelativeLayout>
+
+</LinearLayout>

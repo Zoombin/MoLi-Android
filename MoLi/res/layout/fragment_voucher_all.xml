@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <com.imooly.android.pull.PullUpListView
+        android:id="@+id/list_voucher_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/app_bg_color"
+        android:dividerHeight="10dp"
+        android:scrollbarThumbVertical="@drawable/thumb_vertical" >
+    </com.imooly.android.pull.PullUpListView>
+
+    <!-- none data layout -->
+
+    <RelativeLayout
+        android:id="@+id/rl_none_voucher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/image_none_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_none_voucher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_none_address"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:singleLine="true"
+            android:text="亲，您还没有代金券哦"
+            android:textColor="@color/app_text_gray"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

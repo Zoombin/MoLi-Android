@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_sub_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/shopcar_subitem_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/fillorder_ckbox_style"
+            android:gravity="center_vertical"
+            android:tag="shopcar_subitem_check" />
+
+        <!-- 失效标志 -->
+
+        <ImageView
+            android:id="@+id/shopcar_subitem_invalid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_shopcar_invalid"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/shopcar_subitem_pic"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:background="@drawable/order_pic_bg"
+            android:padding="1dip"
+            android:scaleType="fitCenter" />
+
+        <!-- 中间 名称/增加/输入/减少 -->
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/shopcar_subitem_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:maxLines="2"
+                android:tag="shopcar_subitem_content"
+                android:text=""
+                android:textColor="@color/app_text_dark_gray"
+                android:textSize="@dimen/tv_size_28" />
+
+            <LinearLayout
+                android:id="@+id/shopcar_subitem_mlayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="afterDescendants"
+                android:orientation="horizontal"
+                android:tag="shopcar_subitem_mlayout" >
+
+                <ImageView
+                    android:id="@+id/shopcar_subitem_minus"
+                    android:layout_width="35dip"
+                    android:layout_height="35dip"
+                    android:background="@drawable/shopcar_sub" />
+
+                <EditText
+                    android:id="@+id/shopcar_subitem_et_num"
+                    android:layout_width="70dip"
+                    android:layout_height="35dip"
+                    android:background="@drawable/order_edit_bg"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:textColor="@color/app_text_black"
+                    android:textSize="14sp" />
+
+                <!-- 处理低系统手机时用 -->
+
+                <TextView
+                    android:id="@+id/shopcar_subitem_txt_num"
+                    android:layout_width="70dip"
+                    android:layout_height="35dip"
+                    android:background="@drawable/order_edit_bg"
+                    android:gravity="center"
+                    android:maxLength="5"
+                    android:textColor="@color/app_text_black"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/shopcar_subitem_plus"
+                    android:layout_width="35dip"
+                    android:layout_height="35dip"
+                    android:background="@drawable/shopcar_add" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/shopcar_subitem_spec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dip"
+                android:maxLines="2"
+                android:textColor="@color/app_text_gray"
+                android:textSize="@dimen/tv_size_24" />
+        </LinearLayout>
+
+        <!-- 右侧 价格/数量/库存 -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_10"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/shopcar_subitem_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/title"
+                android:textSize="@dimen/tv_size_24" />
+
+            <TextView
+                android:id="@+id/shopcar_subitem_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:text=""
+                android:textColor="@color/title"
+                android:textSize="@dimen/tv_size_24" />
+
+            <TextView
+                android:id="@+id/shopcar_subitem_stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/tv_size_24"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 底部虚线 -->
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/tv_size_24"
+        android:layout_marginRight="@dimen/tv_size_24"
+        android:background="@null"
+        android:src="@drawable/order_dash_line" />
+
+</LinearLayout>
